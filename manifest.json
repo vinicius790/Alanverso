@@ -1,0 +1,48 @@
+{
+  "name": "Alanverso — O Multiverso Definitivo do Alanzoka",
+  "short_name": "Alanverso",
+  "description": "Portal interativo com memes históricos, soundboard Web Audio API, central de clipes, gerador de memes HTML5, quiz oficial e sistema de conquistas do Alanzoka.",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0b0f19",
+  "theme_color": "#9333ea",
+  "categories": ["entertainment", "games", "humor"],
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Soundboard Interativo",
+      "short_name": "Soundboard",
+      "description": "Tocar sons e bordões do Alanzoka",
+      "url": "./index.html#soundboard"
+    },
+    {
+      "name": "Central de Clipes",
+      "short_name": "Clipes",
+      "description": "Buscar e assistir clipes lendários",
+      "url": "./index.html#clips"
+    },
+    {
+      "name": "Quiz do Alanverso",
+      "short_name": "Quiz",
+      "description": "Testar conhecimentos sobre o Alanzoka",
+      "url": "./index.html#quiz"
+    },
+    {
+      "name": "Conquistas & Perfil",
+      "short_name": "Conquistas",
+      "description": "Ver troféus desbloqueados e exportar perfil",
+      "url": "./index.html#achievements"
+    }
+  ]
+}

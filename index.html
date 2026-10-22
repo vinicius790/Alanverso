@@ -1,0 +1,2142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Básico -->
+    <title>Alanverso — O Multiverso Definitivo do Alanzoka</title>
+    <meta
+      name="description"
+      content="Descubra o multiverso caótico e hilário do Alanzoka: memes históricos, clipes lendários, variantes do multiverso e galeria interativa para os fãs!"
+    />
+    <meta
+      name="keywords"
+      content="Alanzoka, Alanverso, Memes Alanzoka, Twitch Brasil, Streamer, Clipes Engraçados, Alan Ferreira, Jogos de Terror Alanzoka"
+    />
+    <meta name="author" content="Alanverso Showcase" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#9333ea" />
+    <link rel="canonical" href="https://alanverso.vercel.app/" />
+
+    <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Alanverso" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content="Alanverso — O Multiverso Definitivo do Alanzoka" />
+    <meta
+      property="og:description"
+      content="Galeria interativa, variantes do multiverso, reações clássicas e o melhor da comunidade do Alanzoka em um só lugar."
+    />
+    <meta
+      property="og:image"
+      content="https://pbs.twimg.com/media/C-yYloeXoAIJoFF?format=jpg&name=900x900"
+    />
+    <meta property="og:image:alt" content="Alanzoka com olhar sedutor e clássico no Alanverso" />
+    <meta property="og:image:width" content="900" />
+    <meta property="og:image:height" content="900" />
+    <meta property="og:url" content="https://alanverso.vercel.app/" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@alanzoka" />
+    <meta name="twitter:creator" content="@alanzoka" />
+    <meta name="twitter:title" content="Alanverso — O Multiverso Definitivo do Alanzoka" />
+    <meta
+      name="twitter:description"
+      content="Explore os melhores memes, personas e depoimentos da história das lives do Alanzoka."
+    />
+    <meta
+      name="twitter:image"
+      content="https://pbs.twimg.com/media/C-yYloeXoAIJoFF?format=jpg&name=900x900"
+    />
+    <meta name="twitter:image:alt" content="Cartão promocional do Alanverso com memes e reações épicas do Alanzoka" />
+
+    <!-- Favicon Vetorial SVG & Fallback + PWA Manifest -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="alternate icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="favicon.svg" />
+    <link rel="manifest" href="manifest.json" />
+
+    <!-- Dados Estruturados Schema.org (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Alanverso",
+      "alternateName": "O Multiverso Definitivo do Alanzoka",
+      "url": "https://alanverso.vercel.app/",
+      "description": "Portal e galeria com os maiores momentos, memes e clipes lendários das lives do Alanzoka.",
+      "inLanguage": "pt-BR",
+      "author": {
+        "@type": "Person",
+        "name": "Alan Ferreira (Alanzoka)",
+        "sameAs": [
+          "https://www.twitch.tv/alanzoka",
+          "https://www.youtube.com/c/alanzoka",
+          "https://twitter.com/alanzoka",
+          "https://www.instagram.com/alanzoka/"
+        ]
+      }
+    }
+    </script>
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Skip-links para Acessibilidade via Teclado (WCAG 2.2 AAA) -->
+    <nav class="skip-links" aria-label="Atalhos de acessibilidade para navegação rápida via teclado">
+      <a href="#main-content" class="skip-link" data-i18n="skip.main">Pular para o conteúdo principal</a>
+      <a href="#memes" class="skip-link" data-i18n="skip.memes">Pular para a galeria de memes</a>
+      <a href="#soundboard" class="skip-link" data-i18n="skip.soundboard">Pular para o soundboard interativo</a>
+      <a href="#clips" class="skip-link" data-i18n="skip.clips">Pular para a central de clipes</a>
+      <a href="#meme-generator" class="skip-link" data-i18n="skip.generator">Pular para o gerador de memes</a>
+      <a href="#quiz" class="skip-link" data-i18n="skip.quiz">Pular para o quiz interativo</a>
+      <a href="#achievements" class="skip-link" data-i18n="skip.achievements">Pular para conquistas e perfil</a>
+      <a href="#about" class="skip-link" data-i18n="skip.about">Pular para o multiverso do Alan</a>
+      <a href="#characters" class="skip-link" data-i18n="skip.characters">Pular para personagens</a>
+      <a href="#testimonials" class="skip-link" data-i18n="skip.testimonials">Pular para depoimentos da comunidade</a>
+      <a href="#contact" class="skip-link" data-i18n="skip.contact">Pular para canais oficiais</a>
+    </nav>
+
+    <!-- Região Live ARIA para notificações e anúncios acessíveis -->
+    <div id="a11y-live-region" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- =========================================================================
+         HEADER & NAV
+         ========================================================================= -->
+    <header id="header" role="banner">
+      <div class="container">
+        <nav aria-label="Navegação Principal">
+          <a class="logo" href="#home" aria-label="Ir para a página inicial">
+            Alan<span>verso</span>
+          </a>
+
+          <!-- Menu de navegação -->
+          <div class="menu" id="nav-menu">
+            <ul>
+              <li><a href="#home" data-i18n="nav.home">Início</a></li>
+              <li><a href="#memes" data-i18n="nav.memes">Memes</a></li>
+              <li><a href="#soundboard" data-i18n="nav.soundboard">Soundboard</a></li>
+              <li><a href="#clips" data-i18n="nav.clips">Clipes</a></li>
+              <li><a href="#meme-generator" data-i18n="nav.generator">Gerador de Memes</a></li>
+              <li><a href="#quiz" data-i18n="nav.quiz">Quiz</a></li>
+              <li><a href="#achievements" data-i18n="nav.achievements">Conquistas</a></li>
+              <li><a href="#about" data-i18n="nav.about">Multiverso</a></li>
+              <li><a href="#characters" data-i18n="nav.characters">Personagens</a></li>
+              <li><a href="#testimonials" data-i18n="nav.testimonials">Depoimentos</a></li>
+              <li><a href="#contact" data-i18n="nav.contact">Canais</a></li>
+            </ul>
+          </div>
+
+          <!-- Ações de topo: Troféus, Atalhos, Seletor de Idioma, Dark Mode, Contraste e Mobile Menu -->
+          <div class="nav-actions">
+            <a
+              href="#achievements"
+              id="achievements-nav-btn"
+              class="achievements-badge-btn"
+              aria-label="Ver conquistas desbloqueadas"
+              title="Conquistas do Alanverso"
+            >
+              <span aria-hidden="true">🏆</span>
+              <span id="achievements-counter-badge">0/10</span>
+            </a>
+
+            <button
+              id="shortcuts-toggle"
+              class="shortcuts-toggle-btn"
+              type="button"
+              aria-label="Abrir guia de atalhos de teclado"
+              title="Atalhos de Teclado (?)"
+            >
+              <span aria-hidden="true">⌨️</span>
+            </button>
+
+            <button
+              id="lang-toggle"
+              class="lang-toggle-btn"
+              type="button"
+              aria-label="Mudar idioma para Inglês"
+              title="Alternar idioma / Switch language"
+            >
+              <span class="lang-icon" aria-hidden="true">🌐</span>
+              <span id="current-lang" class="lang-badge">EN</span>
+            </button>
+
+            <button
+              id="theme-toggle"
+              class="theme-toggle-btn"
+              type="button"
+              aria-label="Alternar modo escuro ou claro"
+            >
+              <!-- Sun Icon -->
+              <svg
+                id="theme-icon-sun"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                style="display: none"
+              >
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+              <!-- Moon Icon -->
+              <svg
+                id="theme-icon-moon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+            </button>
+
+            <button
+              id="contrast-toggle"
+              class="contrast-toggle-btn"
+              type="button"
+              aria-label="Alternar modo de alto contraste"
+              aria-pressed="false"
+              title="Alternar alto contraste"
+            >
+              <svg
+                id="contrast-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 2a10 10 0 0 1 0 20z" fill="currentColor"></path>
+              </svg>
+              <span class="sr-only">Alto Contraste</span>
+            </button>
+
+            <button
+              class="toggle-menu-btn"
+              type="button"
+              aria-label="Abrir menu de navegação"
+              aria-expanded="false"
+              aria-controls="nav-menu"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- =========================================================================
+         CONTEÚDO PRINCIPAL
+         ========================================================================= -->
+    <main id="main-content">
+      <!-- HERO / HOME -->
+      <section class="section" id="home">
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-text">
+              <h1 data-i18n="hero.title">
+                O Multiverso Absoluto do <span>Alanzoka</span>
+              </h1>
+              <p data-i18n="hero.subtitle">
+                De jogatinas memoráveis a reações épicas que marcaram a internet brasileira.
+                Prepare-se para reviver as melhores fases, caretas e lendas da live!
+              </p>
+              <div class="hero-actions">
+                <a href="#memes" class="button">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                  <span data-i18n="hero.btn_memes">Explorar Memes</span>
+                </a>
+                <button
+                  type="button"
+                  class="button button-secondary"
+                  data-open-modal
+                  data-title="Enviar Momento do Alanverso"
+                  data-desc="Tem um clipe ou reação épica? Envie para ser imortalizado na galeria!"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M12 5v14M5 12h14"></path>
+                  </svg>
+                  <span data-i18n="hero.btn_submit">Enviar Momento</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="hero-media-wrapper">
+              <div class="hero-card">
+                <img
+                  src="https://c.tenor.com/AXPrsBtnIXAAAAAd/alanzoka-metralhadora.gif"
+                  alt="Alanzoka disparando metralhadora em stream"
+                  loading="lazy"
+                />
+                <div class="hero-card-caption">
+                  <span data-i18n="hero.card_caption">Modo Full Metralhadora</span>
+                  <span class="hero-badge" data-i18n="hero.card_badge">AO VIVO</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-1"></div>
+
+      <!-- MEMES & REAÇÕES -->
+      <section class="section" id="memes">
+        <div class="container">
+          <div class="section-header">
+            <span class="tag" data-i18n="memes.tag">Momentos de Ouro</span>
+            <h2 class="title" data-i18n="memes.title">Reações Que Viraram História</h2>
+            <p class="subtitle" data-i18n="memes.subtitle">
+              Seja na paquera com a cremosa ou levando o susto do século no jogo de terror.
+            </p>
+          </div>
+
+          <div class="memes-grid">
+            <!-- Card 1 -->
+            <article class="meme-card">
+              <div class="meme-card-thumb">
+                <img
+                  src="https://pm1.narvii.com/6635/c153d06540522095f53e59017512087eb9aa437f_hq.jpg"
+                  alt="Reação do Alanzoka sorrindo maliciosamente"
+                  loading="lazy"
+                />
+              </div>
+              <div class="meme-card-body">
+                <h3 data-i18n="memes.card1.title">A Chegada da Cremosa</h3>
+                <p data-i18n="memes.card1.desc">Aquele instante sutil em que a presença da morena é detectada no raio de 50 metros.</p>
+                <div class="meme-card-footer">
+                  <span class="subtitle" data-i18n="memes.card1.badge">Classificação: Lendário</span>
+                  <button
+                    class="btn-open-modal"
+                    data-open-modal
+                    data-title="A Chegada da Cremosa"
+                    data-desc="Um dos memes mais usados nas redes sociais brasileiras."
+                    data-img="https://pm1.narvii.com/6635/c153d06540522095f53e59017512087eb9aa437f_hq.jpg"
+                    type="button"
+                    data-i18n="memes.btn_expand"
+                  >
+                    Ampliar 🔍
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="meme-card">
+              <div class="meme-card-thumb">
+                <img
+                  src="https://64.media.tumblr.com/2854c9fbe6915505146659397180dd26/tumblr_nh25tvWYVa1szd2i0o5_400.gifv"
+                  alt="Alanzoka dançando animado em gif"
+                  loading="lazy"
+                />
+              </div>
+              <div class="meme-card-body">
+                <h3 data-i18n="memes.card2.title">Convite Aceito!</h3>
+                <p data-i18n="memes.card2.desc">A dança da vitória absoluta quando ela aceita comer aquele podrão na esquina.</p>
+                <div class="meme-card-footer">
+                  <span class="subtitle" data-i18n="memes.card2.badge">Classificação: Vitória</span>
+                  <button
+                    class="btn-open-modal"
+                    data-open-modal
+                    data-title="Convite Aceito!"
+                    data-desc="A comemoração que define gerações de gamers românticos."
+                    data-img="https://64.media.tumblr.com/2854c9fbe6915505146659397180dd26/tumblr_nh25tvWYVa1szd2i0o5_400.gifv"
+                    type="button"
+                    data-i18n="memes.btn_expand"
+                  >
+                    Ampliar 🔍
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="meme-card">
+              <div class="meme-card-thumb">
+                <img
+                  src="https://pbs.twimg.com/media/C-yYloeXoAIJoFF?format=jpg&name=900x900"
+                  alt="Alanzoka com olhar sedutor e bigode fino"
+                  loading="lazy"
+                />
+              </div>
+              <div class="meme-card-body">
+                <h3 data-i18n="memes.card3.title">O Sedutor da Quebrada</h3>
+                <p data-i18n="memes.card3.desc">A imponência rústica do maior galã das noites de streaming da América Latina.</p>
+                <div class="meme-card-footer">
+                  <span class="subtitle" data-i18n="memes.card3.badge">Classificação: Charme</span>
+                  <button
+                    class="btn-open-modal"
+                    data-open-modal
+                    data-title="O Sedutor da Quebrada"
+                    data-desc="O olhar penetrante que conquistou legiões de inscritos."
+                    data-img="https://pbs.twimg.com/media/C-yYloeXoAIJoFF?format=jpg&name=900x900"
+                    type="button"
+                    data-i18n="memes.btn_expand"
+                  >
+                    Ampliar 🔍
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="meme-card">
+              <div class="meme-card-thumb">
+                <img
+                  src="https://c.tenor.com/Z0LFC5W7yl8AAAAd/alan-chorando-alan.gif"
+                  alt="Alanzoka chorando desconsolado"
+                  loading="lazy"
+                />
+              </div>
+              <div class="meme-card-body">
+                <h3 data-i18n="memes.card4.title">Coração Partido</h3>
+                <p data-i18n="memes.card4.desc">Quando a resposta foi um sonoro 'te vejo só como amigo' após meses de dedicação.</p>
+                <div class="meme-card-footer">
+                  <span class="subtitle" data-i18n="memes.card4.badge">Classificação: Drama</span>
+                  <button
+                    class="btn-open-modal"
+                    data-open-modal
+                    data-title="Coração Partido"
+                    data-desc="A dor em formato de gif eterno."
+                    data-img="https://c.tenor.com/Z0LFC5W7yl8AAAAd/alan-chorando-alan.gif"
+                    type="button"
+                    data-i18n="memes.btn_expand"
+                  >
+                    Ampliar 🔍
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-1"></div>
+
+      <!-- =========================================================================
+           SOUNDBOARD INTERATIVO (WEB AUDIO API + CANVAS VISUALIZER)
+           ========================================================================= -->
+      <section class="section" id="soundboard" aria-labelledby="soundboard-title">
+        <div class="container">
+          <header class="section-header">
+            <span class="tag" data-i18n="soundboard.tag">Áudio & Efeitos</span>
+            <h2 id="soundboard-title" data-i18n="soundboard.title">
+              Soundboard Interativo do <span>Alanzoka</span>
+            </h2>
+            <p class="subtitle" data-i18n="soundboard.subtitle">
+              Efeitos sintetizados em tempo real com Web Audio API, frases épicas e visualizador osciloscópio dinâmico em Canvas.
+            </p>
+          </header>
+
+          <!-- Visualizador de Ondas Sonoras Canvas -->
+          <div class="soundboard-visualizer-card">
+            <div class="visualizer-header">
+              <div class="visualizer-status">
+                <span class="status-dot" id="soundboard-status-dot"></span>
+                <span id="soundboard-status-text">Pronto para tocar (clique em um som)</span>
+              </div>
+              <div class="visualizer-mode-toggle">
+                <button type="button" class="btn-vis-mode active" id="btn-vis-waves" aria-label="Visualizar onda senoidal">
+                  🌊 Ondas
+                </button>
+                <button type="button" class="btn-vis-mode" id="btn-vis-bars" aria-label="Visualizar espectro de frequência">
+                  📊 Frequência
+                </button>
+              </div>
+            </div>
+
+            <canvas
+              id="soundboard-canvas"
+              width="680"
+              height="130"
+              aria-label="Visualizador gráfico dinâmico de ondas sonoras"
+            ></canvas>
+
+            <!-- Painel de Controles: Volume, Pitch e Parar -->
+            <div class="soundboard-controls-bar">
+              <div class="control-item">
+                <label for="soundboard-volume">
+                  <span class="ctrl-icon" aria-hidden="true">🔊</span>
+                  <span>Volume:</span>
+                  <strong id="soundboard-vol-val">80%</strong>
+                </label>
+                <input
+                  type="range"
+                  id="soundboard-volume"
+                  min="0"
+                  max="1"
+                  step="0.05"
+                  value="0.8"
+                  aria-label="Ajustar volume geral do soundboard"
+                />
+              </div>
+
+              <div class="control-item">
+                <label for="soundboard-pitch">
+                  <span class="ctrl-icon" aria-hidden="true">🎚️</span>
+                  <span>Pitch / Tom:</span>
+                  <strong id="soundboard-pitch-val">1.0x (Normal)</strong>
+                </label>
+                <input
+                  type="range"
+                  id="soundboard-pitch"
+                  min="0.5"
+                  max="2.0"
+                  step="0.1"
+                  value="1.0"
+                  aria-label="Ajustar afinação de tom dos efeitos"
+                />
+              </div>
+
+              <div class="control-actions">
+                <button
+                  type="button"
+                  id="soundboard-stop-btn"
+                  class="button button-danger"
+                  aria-label="Parar todos os efeitos sonoros em execução"
+                >
+                  ⏹ Parar Tudo
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Grade de Botões de Sons do Soundboard -->
+          <div class="soundboard-grid" id="soundboard-buttons">
+            <button
+              type="button"
+              class="sound-btn"
+              data-sound="jumpscare"
+              aria-label="Tocar efeito sonoro: Grito de Jumpscare do Terror"
+            >
+              <span class="sound-key-badge">1</span>
+              <span class="sound-icon">😱</span>
+              <span class="sound-info">
+                <strong>Grito Jumpscare</strong>
+                <small>Terror e Sub-bass</small>
+              </span>
+              <span class="sound-wave-anim" aria-hidden="true"><span></span><span></span><span></span></span>
+            </button>
+
+            <button
+              type="button"
+              class="sound-btn"
+              data-sound="metralhadora"
+              aria-label="Tocar efeito sonoro: Metralhadora de Risada Caótica"
+            >
+              <span class="sound-key-badge">2</span>
+              <span class="sound-icon">😂</span>
+              <span class="sound-info">
+                <strong>Metralhadora de Riso</strong>
+                <small>Gargalhada Staccato</small>
+              </span>
+              <span class="sound-wave-anim" aria-hidden="true"><span></span><span></span><span></span></span>
+            </button>
+
+            <button
+              type="button"
+              class="sound-btn"
+              data-sound="pedra"
+              aria-label="Tocar efeito sonoro: Olha a Pedra! Sirene de perigo e drop 808"
+            >
+              <span class="sound-key-badge">3</span>
+              <span class="sound-icon">🪨</span>
+              <span class="sound-info">
+                <strong>OLHA A PEDRA!</strong>
+                <small>Sirene + Drop 808</small>
+              </span>
+              <span class="sound-wave-anim" aria-hidden="true"><span></span><span></span><span></span></span>
+            </button>
+
+            <button
+              type="button"
+              class="sound-btn"
+              data-sound="tijolinho"
+              aria-label="Tocar efeito sonoro: É o Tijolinho! Arpeggio 8-bit"
+            >
+              <span class="sound-key-badge">4</span>
+              <span class="sound-icon">🧱</span>
+              <span class="sound-info">
+                <strong>É o Tijolinho!</strong>
+                <small>Arpeggio 8-Bit Retro</small>
+              </span>
+              <span class="sound-wave-anim" aria-hidden="true"><span></span><span></span><span></span></span>
+            </button>
+
+            <button
+              type="button"
+              class="sound-btn"
+              data-sound="cerebro"
+              aria-label="Tocar efeito sonoro: Ligando o Cérebro, carregamento sci-fi"
+            >
+              <span class="sound-key-badge">5</span>
+              <span class="sound-icon">🧠</span>
+              <span class="sound-info">
+                <strong>Ligando o Cérebro</strong>
+                <small>Modem Dial-up Sci-Fi</small>
+              </span>
+              <span class="sound-wave-anim" aria-hidden="true"><span></span><span></span><span></span></span>
+            </button>
+
+            <button
+              type="button"
+              class="sound-btn"
+              data-sound="cremosa"
+              aria-label="Tocar efeito sonoro: Paquera com a Cremosa"
+            >
+              <span class="sound-key-badge">6</span>
+              <span class="sound-icon">😏</span>
+              <span class="sound-info">
+                <strong>Paquera da Cremosa</strong>
+                <small>Jazz Vibrato Suave</small>
+              </span>
+              <span class="sound-wave-anim" aria-hidden="true"><span></span><span></span><span></span></span>
+            </button>
+
+            <button
+              type="button"
+              class="sound-btn"
+              data-sound="puzzle"
+              aria-label="Tocar efeito sonoro: Pânico no Puzzle, tensão crescente"
+            >
+              <span class="sound-key-badge">7</span>
+              <span class="sound-icon">🧩</span>
+              <span class="sound-info">
+                <strong>Pânico no Puzzle</strong>
+                <small>Tensão Shepard Riser</small>
+              </span>
+              <span class="sound-wave-anim" aria-hidden="true"><span></span><span></span><span></span></span>
+            </button>
+
+            <button
+              type="button"
+              class="sound-btn"
+              data-sound="vitoria"
+              aria-label="Tocar efeito sonoro: Vitória Épica, fanfarra gamer"
+            >
+              <span class="sound-key-badge">8</span>
+              <span class="sound-icon">🏆</span>
+              <span class="sound-info">
+                <strong>Vitória Épica!</strong>
+                <small>Fanfarra Triunfal</small>
+              </span>
+              <span class="sound-wave-anim" aria-hidden="true"><span></span><span></span><span></span></span>
+            </button>
+
+            <button
+              type="button"
+              class="sound-btn"
+              data-sound="rage"
+              aria-label="Tocar efeito sonoro: Rage Quit e Womp Womp de derrota"
+            >
+              <span class="sound-key-badge">9</span>
+              <span class="sound-icon">🤬</span>
+              <span class="sound-info">
+                <strong>Rage Quit / Fail</strong>
+                <small>Trombone Womp Womp</small>
+              </span>
+              <span class="sound-wave-anim" aria-hidden="true"><span></span><span></span><span></span></span>
+            </button>
+
+            <button
+              type="button"
+              class="sound-btn sound-btn-speech"
+              data-sound="speech-pedra"
+              aria-label="Tocar bordão falado: Olha a Pedraaa!"
+            >
+              <span class="sound-key-badge">P</span>
+              <span class="sound-icon">🗣️</span>
+              <span class="sound-info">
+                <strong>Fala: 'Olha a Pedra!'</strong>
+                <small>Voz Sintetizada + FX</small>
+              </span>
+              <span class="sound-wave-anim" aria-hidden="true"><span></span><span></span><span></span></span>
+            </button>
+
+            <button
+              type="button"
+              class="sound-btn sound-btn-speech"
+              data-sound="speech-tijolo"
+              aria-label="Tocar bordão falado: É o Tijolinho, moleque!"
+            >
+              <span class="sound-key-badge">T</span>
+              <span class="sound-icon">🗣️</span>
+              <span class="sound-info">
+                <strong>Fala: 'É o Tijolinho!'</strong>
+                <small>Voz Sintetizada + FX</small>
+              </span>
+              <span class="sound-wave-anim" aria-hidden="true"><span></span><span></span><span></span></span>
+            </button>
+
+            <button
+              type="button"
+              class="sound-btn sound-btn-speech"
+              data-sound="speech-respira"
+              aria-label="Tocar bordão falado: Calma, respira Alanzoka!"
+            >
+              <span class="sound-key-badge">R</span>
+              <span class="sound-icon">🗣️</span>
+              <span class="sound-info">
+                <strong>Fala: 'Calma, Respira!'</strong>
+                <small>Voz Sintetizada + FX</small>
+              </span>
+              <span class="sound-wave-anim" aria-hidden="true"><span></span><span></span><span></span></span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-2"></div>
+
+      <!-- =========================================================================
+           CENTRAL DE VÍDEOS & CLIPES (PLAYER MODAL RESPONSIVO)
+           ========================================================================= -->
+      <section class="section" id="clips" aria-labelledby="clips-title">
+        <div class="container">
+          <header class="section-header">
+            <span class="tag" data-i18n="clips.tag">Galeria Multimídia</span>
+            <h2 id="clips-title" data-i18n="clips.title">
+              Central de Vídeos & <span>Clipes Lendários</span>
+            </h2>
+            <p class="subtitle" data-i18n="clips.subtitle">
+              Reviva os melhores momentos da carreira do Alan com filtros temáticos e player multimídia interativo com controle completo de reprodução.
+            </p>
+          </header>
+
+          <!-- Barra de Busca Instantânea (Debounce) + Ordenação + Filtros -->
+          <div class="clips-toolbar" role="search" aria-label="Buscar e ordenar clipes do Alanverso">
+            <div class="clips-search-box">
+              <label for="clips-search-input" class="sr-only">Buscar clipe</label>
+              <span class="search-icon" aria-hidden="true">🔍</span>
+              <input
+                type="search"
+                id="clips-search-input"
+                placeholder="Buscar clipe por título, jogo ou momento (Atalho: /)..."
+                data-i18n-attr="placeholder:clips.search_placeholder"
+                autocomplete="off"
+                aria-label="Buscar clipe por título, jogo ou descrição"
+              />
+              <button
+                type="button"
+                id="clips-search-clear"
+                class="search-clear-btn"
+                aria-label="Limpar busca de clipes"
+                style="display: none;"
+              >
+                ✕
+              </button>
+            </div>
+
+            <div class="clips-sort-box">
+              <label for="clips-sort-select" data-i18n="clips.sort_label">Ordenar por:</label>
+              <select id="clips-sort-select" aria-label="Ordenar clipes">
+                <option value="views" data-i18n="clips.sort_views">Mais Vistos</option>
+                <option value="duration" data-i18n="clips.sort_duration">Maior Duração</option>
+                <option value="alpha" data-i18n="clips.sort_alpha">Ordem Alfabética (A-Z)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Filtros de Categoria de Clipes -->
+          <div class="clips-filter-nav" role="tablist" aria-label="Filtrar clipes por categoria">
+            <button type="button" class="clip-filter-btn active" data-filter="all">Todos os Momentos</button>
+            <button type="button" class="clip-filter-btn" data-filter="terror">Sustos & Terror</button>
+            <button type="button" class="clip-filter-btn" data-filter="comedia">Risadas & Memes</button>
+            <button type="button" class="clip-filter-btn" data-filter="jogatinas">Jogatinas Épicas</button>
+          </div>
+
+          <p id="clips-results-count" class="clips-results-count" aria-live="polite">
+            Exibindo 6 de 6 clipes
+          </p>
+
+          <!-- Grade de Clipes -->
+          <div class="clips-grid" id="clips-gallery">
+            <!-- Clipe 1 -->
+            <article class="clip-card" data-category="terror">
+              <div class="clip-thumb-wrapper">
+                <img
+                  src="https://pm1.narvii.com/6635/c153d06540522095f53e59017512087eb9aa437f_hq.jpg"
+                  alt="Alan levando o maior susto da história em jogo de terror"
+                  loading="lazy"
+                />
+                <span class="clip-duration">0:48</span>
+                <span class="clip-badge">Terror</span>
+                <button
+                  type="button"
+                  class="clip-play-overlay-btn"
+                  aria-label="Reproduzir clipe O Maior Jumpscare em Resident Evil"
+                  data-clip-title="O Maior Jumpscare em Resident Evil"
+                  data-clip-game="Resident Evil Village"
+                  data-clip-desc="Aquele instante em que a criatura gigante surge de surpresa e a cadeira do Alanzoka quase quebra de tanto pânico."
+                  data-clip-duration="0:48"
+                  data-clip-views="1.4M visualizações"
+                  data-clip-theme="terror"
+                >
+                  <span class="play-icon-triangle" aria-hidden="true">▶</span>
+                </button>
+              </div>
+              <div class="clip-info">
+                <div class="clip-meta">
+                  <span class="clip-game">🎮 Resident Evil Village</span>
+                  <span class="clip-views">👁 1.4M views</span>
+                </div>
+                <h3>O Maior Jumpscare em Resident Evil</h3>
+                <p>Alan foi surpreendido no escuro e soltou o grito mais agudo da história das lives.</p>
+                <button
+                  type="button"
+                  class="button button-outline clip-trigger-btn"
+                  data-clip-title="O Maior Jumpscare em Resident Evil"
+                  data-clip-game="Resident Evil Village"
+                  data-clip-desc="Aquele instante em que a criatura gigante surge de surpresa e a cadeira do Alanzoka quase quebra de tanto pânico."
+                  data-clip-duration="0:48"
+                  data-clip-views="1.4M visualizações"
+                  data-clip-theme="terror"
+                >
+                  Assistir Clipe 🎬
+                </button>
+              </div>
+            </article>
+
+            <!-- Clipe 2 -->
+            <article class="clip-card" data-category="comedia">
+              <div class="clip-thumb-wrapper">
+                <img
+                  src="https://c.tenor.com/AXPrsBtnIXAAAAAd/alanzoka-metralhadora.gif"
+                  alt="Alan rindo incontrolavelmente no modo metralhadora"
+                  loading="lazy"
+                />
+                <span class="clip-duration">1:15</span>
+                <span class="clip-badge">Comédia</span>
+                <button
+                  type="button"
+                  class="clip-play-overlay-btn"
+                  aria-label="Reproduzir clipe Metralhadora de Risada em Fall Guys"
+                  data-clip-title="Metralhadora de Risada em Fall Guys"
+                  data-clip-game="Fall Guys: Ultimate Knockout"
+                  data-clip-desc="A física quebrada do boneco jujuba causou uma crise incontrolável de riso que durou mais de 5 minutos."
+                  data-clip-duration="1:15"
+                  data-clip-views="2.8M visualizações"
+                  data-clip-theme="comedia"
+                >
+                  <span class="play-icon-triangle" aria-hidden="true">▶</span>
+                </button>
+              </div>
+              <div class="clip-info">
+                <div class="clip-meta">
+                  <span class="clip-game">🎮 Fall Guys</span>
+                  <span class="clip-views">👁 2.8M views</span>
+                </div>
+                <h3>Metralhadora de Risada em Fall Guys</h3>
+                <p>O feijãozinho tropeçou no vácuo e o Alan não aguentou: ativou o modo riso sem ar!</p>
+                <button
+                  type="button"
+                  class="button button-outline clip-trigger-btn"
+                  data-clip-title="Metralhadora de Risada em Fall Guys"
+                  data-clip-game="Fall Guys: Ultimate Knockout"
+                  data-clip-desc="A física quebrada do boneco jujuba causou uma crise incontrolável de riso que durou mais de 5 minutos."
+                  data-clip-duration="1:15"
+                  data-clip-views="2.8M visualizações"
+                  data-clip-theme="comedia"
+                >
+                  Assistir Clipe 🎬
+                </button>
+              </div>
+            </article>
+
+            <!-- Clipe 3 -->
+            <article class="clip-card" data-category="jogatinas">
+              <div class="clip-thumb-wrapper">
+                <img
+                  src="https://64.media.tumblr.com/2854c9fbe6915505146659397180dd26/tumblr_nh25tvWYVa1szd2i0o5_400.gifv"
+                  alt="Alan comemorando jogada histórica no Minecraft"
+                  loading="lazy"
+                />
+                <span class="clip-duration">0:52</span>
+                <span class="clip-badge">Jogatina</span>
+                <button
+                  type="button"
+                  class="clip-play-overlay-btn"
+                  aria-label="Reproduzir clipe Olha a Pedra! Salvamento Épico"
+                  data-clip-title="Olha a Pedra! Salvamento Épico"
+                  data-clip-game="Minecraft Hardcore"
+                  data-clip-desc="Cercado por zumbis na ravina, Alan invoca a lendária tática do tijolinho e escapa ileso."
+                  data-clip-duration="0:52"
+                  data-clip-views="980K visualizações"
+                  data-clip-theme="jogatinas"
+                >
+                  <span class="play-icon-triangle" aria-hidden="true">▶</span>
+                </button>
+              </div>
+              <div class="clip-info">
+                <div class="clip-meta">
+                  <span class="clip-game">🎮 Minecraft Hardcore</span>
+                  <span class="clip-views">👁 980K views</span>
+                </div>
+                <h3>Olha a Pedra! Salvamento Épico</h3>
+                <p>Na beira da lava, ele colocou o bloco milagroso com 0.1 de coração restante.</p>
+                <button
+                  type="button"
+                  class="button button-outline clip-trigger-btn"
+                  data-clip-title="Olha a Pedra! Salvamento Épico"
+                  data-clip-game="Minecraft Hardcore"
+                  data-clip-desc="Cercado por zumbis na ravina, Alan invoca a lendária tática do tijolinho e escapa ileso."
+                  data-clip-duration="0:52"
+                  data-clip-views="980K visualizações"
+                  data-clip-theme="jogatinas"
+                >
+                  Assistir Clipe 🎬
+                </button>
+              </div>
+            </article>
+
+            <!-- Clipe 4 -->
+            <article class="clip-card" data-category="terror">
+              <div class="clip-thumb-wrapper">
+                <img
+                  src="https://static.quizur.com/i/b/59a320f8ae6fc4.1987066359a320f8725e80.76888033.jpg"
+                  alt="Alan apavorado no Phasmophobia"
+                  loading="lazy"
+                />
+                <span class="clip-duration">1:38</span>
+                <span class="clip-badge">Terror</span>
+                <button
+                  type="button"
+                  class="clip-play-overlay-btn"
+                  aria-label="Reproduzir clipe Conversando com Fantasma no Phasmophobia"
+                  data-clip-title="Conversando com Fantasma no Phasmophobia"
+                  data-clip-game="Phasmophobia"
+                  data-clip-desc="A caixa de som respondeu o nome dele e o microfone estourou na velocidade da luz."
+                  data-clip-duration="1:38"
+                  data-clip-views="3.1M visualizações"
+                  data-clip-theme="terror"
+                >
+                  <span class="play-icon-triangle" aria-hidden="true">▶</span>
+                </button>
+              </div>
+              <div class="clip-info">
+                <div class="clip-meta">
+                  <span class="clip-game">🎮 Phasmophobia</span>
+                  <span class="clip-views">👁 3.1M views</span>
+                </div>
+                <h3>Conversando com Fantasma</h3>
+                <p>Ele jurou que era um amigo trollando, até que as luzes da casa começaram a piscar.</p>
+                <button
+                  type="button"
+                  class="button button-outline clip-trigger-btn"
+                  data-clip-title="Conversando com Fantasma no Phasmophobia"
+                  data-clip-game="Phasmophobia"
+                  data-clip-desc="A caixa de som respondeu o nome dele e o microfone estourou na velocidade da luz."
+                  data-clip-duration="1:38"
+                  data-clip-views="3.1M visualizações"
+                  data-clip-theme="terror"
+                >
+                  Assistir Clipe 🎬
+                </button>
+              </div>
+            </article>
+
+            <!-- Clipe 5 -->
+            <article class="clip-card" data-category="comedia">
+              <div class="clip-thumb-wrapper">
+                <img
+                  src="https://pbs.twimg.com/media/C-yYloeXoAIJoFF?format=jpg&name=900x900"
+                  alt="Expressão de galã do Alanzoka olhando para a câmera"
+                  loading="lazy"
+                />
+                <span class="clip-duration">0:39</span>
+                <span class="clip-badge">Comédia</span>
+                <button
+                  type="button"
+                  class="clip-play-overlay-btn"
+                  aria-label="Reproduzir clipe A Cantada Mais Suave da Twitch"
+                  data-clip-title="A Cantada Mais Suave da Twitch"
+                  data-clip-game="Just Chatting"
+                  data-clip-desc="Aquele momento em que o chat pediu uma dica de romance e o mestre ensinou a técnica suprema."
+                  data-clip-duration="0:39"
+                  data-clip-views="1.9M visualizações"
+                  data-clip-theme="comedia"
+                >
+                  <span class="play-icon-triangle" aria-hidden="true">▶</span>
+                </button>
+              </div>
+              <div class="clip-info">
+                <div class="clip-meta">
+                  <span class="clip-game">💬 Papo Furado</span>
+                  <span class="clip-views">👁 1.9M views</span>
+                </div>
+                <h3>A Cantada Mais Suave da Twitch</h3>
+                <p>Alan ajeitou o fone, olhou direto na lente e conquistou meio milhão de pessoas.</p>
+                <button
+                  type="button"
+                  class="button button-outline clip-trigger-btn"
+                  data-clip-title="A Cantada Mais Suave da Twitch"
+                  data-clip-game="Just Chatting"
+                  data-clip-desc="Aquele momento em que o chat pediu uma dica de romance e o mestre ensinou a técnica suprema."
+                  data-clip-duration="0:39"
+                  data-clip-views="1.9M visualizações"
+                  data-clip-theme="comedia"
+                >
+                  Assistir Clipe 🎬
+                </button>
+              </div>
+            </article>
+
+            <!-- Clipe 6 -->
+            <article class="clip-card" data-category="jogatinas">
+              <div class="clip-thumb-wrapper">
+                <img
+                  src="https://i1.sndcdn.com/artworks-000378499812-ueus86-t500x500.jpg"
+                  alt="Alan concentrado em jogatina intensa"
+                  loading="lazy"
+                />
+                <span class="clip-duration">2:04</span>
+                <span class="clip-badge">Jogatina</span>
+                <button
+                  type="button"
+                  class="clip-play-overlay-btn"
+                  aria-label="Reproduzir clipe O Boss Impossível Derrotado com 1 HP"
+                  data-clip-title="O Boss Impossível Derrotado com 1 HP"
+                  data-clip-game="Elden Ring"
+                  data-clip-desc="Após 47 tentativas e quase arremessar o controle na parede, o milagre da esquiva perfeita aconteceu."
+                  data-clip-duration="2:04"
+                  data-clip-views="4.2M visualizações"
+                  data-clip-theme="jogatinas"
+                >
+                  <span class="play-icon-triangle" aria-hidden="true">▶</span>
+                </button>
+              </div>
+              <div class="clip-info">
+                <div class="clip-meta">
+                  <span class="clip-game">🎮 Elden Ring</span>
+                  <span class="clip-views">👁 4.2M views</span>
+                </div>
+                <h3>O Boss Impossível com 1 de Vida</h3>
+                <p>O coração batendo a 200 BPM e a esquiva que salvou a run mais épica do ano.</p>
+                <button
+                  type="button"
+                  class="button button-outline clip-trigger-btn"
+                  data-clip-title="O Boss Impossível Derrotado com 1 HP"
+                  data-clip-game="Elden Ring"
+                  data-clip-desc="Após 47 tentativas e quase arremessar o controle na parede, o milagre da esquiva perfeita aconteceu."
+                  data-clip-duration="2:04"
+                  data-clip-views="4.2M visualizações"
+                  data-clip-theme="jogatinas"
+                >
+                  Assistir Clipe 🎬
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <!-- Estado Vazio de Busca/Filtro -->
+          <div id="clips-empty-state" class="clips-empty-state" style="display: none;" aria-live="polite">
+            <p>Nenhum clipe encontrado para essa busca ou filtro no Alanverso.</p>
+            <button type="button" id="clips-reset-filter" class="button button-secondary">
+              🔄 Limpar Busca e Filtros
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-1"></div>
+
+      <!-- =========================================================================
+           GERADOR DE MEMES DO ALANZOKA (CANVAS HTML5 + DOWNLOAD PNG)
+           ========================================================================= -->
+      <section class="section meme-gen-section" id="meme-generator" aria-labelledby="meme-gen-title">
+        <div class="container">
+          <header class="section-header">
+            <span class="tag" data-i18n="generator.tag">Fábrica de Memes</span>
+            <h2 id="meme-gen-title" data-i18n="generator.title">
+              Gerador de Memes do <span>Alanzoka</span>
+            </h2>
+            <p class="subtitle" data-i18n="generator.subtitle">
+              Crie memes lendários com renderização direta no Canvas HTML5, personalize legendas, escolha as caretas mais icônicas e baixe o PNG em alta resolução!
+            </p>
+          </header>
+
+          <div class="meme-generator-layout">
+            <!-- Painel de Controles -->
+            <div class="meme-controls-card">
+              <h3 style="margin-bottom: 1rem; color: var(--title-color);">🎨 Personalize seu Meme</h3>
+
+              <!-- Textos -->
+              <div class="form-group">
+                <label for="meme-top-text">Legenda Superior:</label>
+                <input
+                  type="text"
+                  id="meme-top-text"
+                  placeholder="QUANDO A CREMOSA ME OLHA..."
+                  value="QUANDO O MONSTRO SURGE NO ESCURO..."
+                  maxlength="70"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="meme-bottom-text">Legenda Inferior:</label>
+                <input
+                  type="text"
+                  id="meme-bottom-text"
+                  placeholder="...E EU TENTO MANTER A CALMA"
+                  value="...MAS O ALAN JÁ SABIA DE TUDO!"
+                  maxlength="70"
+                />
+              </div>
+
+              <!-- Escolha de Imagem Base -->
+              <div class="form-group">
+                <label>Escolha a Expressão do Alan:</label>
+                <div class="meme-preset-grid" id="meme-preset-selector">
+                  <button
+                    type="button"
+                    class="meme-preset-btn active"
+                    data-img-src="https://pbs.twimg.com/media/C-yYloeXoAIJoFF?format=jpg&name=900x900"
+                    data-preset-name="Olhar Sedutor"
+                    aria-label="Selecionar imagem: Olhar Sedutor"
+                  >
+                    <img
+                      src="https://pbs.twimg.com/media/C-yYloeXoAIJoFF?format=jpg&name=900x900"
+                      alt="Preset Alan Sedutor"
+                    />
+                    <span>Sedutor</span>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="meme-preset-btn"
+                    data-img-src="https://pm1.narvii.com/6635/c153d06540522095f53e59017512087eb9aa437f_hq.jpg"
+                    data-preset-name="Pânico Total"
+                    aria-label="Selecionar imagem: Pânico Total"
+                  >
+                    <img
+                      src="https://pm1.narvii.com/6635/c153d06540522095f53e59017512087eb9aa437f_hq.jpg"
+                      alt="Preset Alan em Pânico"
+                    />
+                    <span>Pânico</span>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="meme-preset-btn"
+                    data-img-src="https://c.tenor.com/AXPrsBtnIXAAAAAd/alanzoka-metralhadora.gif"
+                    data-preset-name="Riso Metralhadora"
+                    aria-label="Selecionar imagem: Riso Metralhadora"
+                  >
+                    <img
+                      src="https://c.tenor.com/AXPrsBtnIXAAAAAd/alanzoka-metralhadora.gif"
+                      alt="Preset Alan Rindo"
+                    />
+                    <span>Metralhadora</span>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="meme-preset-btn"
+                    data-img-src="https://c.tenor.com/Z0LFC5W7yl8AAAAd/alan-chorando-alan.gif"
+                    data-preset-name="Choro Dramático"
+                    aria-label="Selecionar imagem: Choro Dramático"
+                  >
+                    <img
+                      src="https://c.tenor.com/Z0LFC5W7yl8AAAAd/alan-chorando-alan.gif"
+                      alt="Preset Alan Chorando"
+                    />
+                    <span>Drama</span>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="meme-preset-btn"
+                    data-img-src="https://static.quizur.com/i/b/59a320f8ae6fc4.1987066359a320f8725e80.76888033.jpg"
+                    data-preset-name="Pensador Crítico"
+                    aria-label="Selecionar imagem: Pensador Crítico"
+                  >
+                    <img
+                      src="https://static.quizur.com/i/b/59a320f8ae6fc4.1987066359a320f8725e80.76888033.jpg"
+                      alt="Preset Alan Pensador"
+                    />
+                    <span>Filósofo</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Upload de Imagem Própria -->
+              <div class="form-group custom-upload-row">
+                <label for="meme-upload-input" class="button button-outline upload-label">
+                  <span aria-hidden="true">📁</span> Carregar Foto Própria
+                </label>
+                <input
+                  type="file"
+                  id="meme-upload-input"
+                  accept="image/*"
+                  class="sr-only"
+                  aria-label="Carregar foto própria do computador para o meme"
+                />
+                <button type="button" id="btn-random-quote" class="button button-outline">
+                  🎲 Frase Aleatória
+                </button>
+              </div>
+
+              <!-- Ajustes de Estilo -->
+              <div class="meme-style-options">
+                <div class="style-row">
+                  <label for="meme-font-size">Tamanho da Fonte: <span id="font-size-val">38px</span></label>
+                  <input type="range" id="meme-font-size" min="22" max="56" value="38" />
+                </div>
+
+                <div class="style-row-grid">
+                  <div class="form-group">
+                    <label for="meme-text-color">Cor do Texto:</label>
+                    <input type="color" id="meme-text-color" value="#ffffff" />
+                  </div>
+                  <div class="form-group">
+                    <label for="meme-stroke-color">Cor da Borda:</label>
+                    <input type="color" id="meme-stroke-color" value="#000000" />
+                  </div>
+                  <div class="form-group checkbox-group">
+                    <label>
+                      <input type="checkbox" id="meme-uppercase-check" checked />
+                      <span>MAIÚSCULAS</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Preview do Canvas e Botões de Download -->
+            <div class="meme-preview-card">
+              <div class="canvas-wrapper">
+                <canvas
+                  id="meme-canvas"
+                  width="600"
+                  height="600"
+                  aria-label="Pré-visualização ao vivo do Meme gerado com Alanzoka"
+                ></canvas>
+              </div>
+
+              <div class="meme-actions">
+                <button
+                  type="button"
+                  id="btn-download-meme"
+                  class="button button-primary"
+                  aria-label="Baixar meme gerado no formato PNG"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  Baixar Meme (PNG)
+                </button>
+
+                <button
+                  type="button"
+                  id="btn-copy-meme"
+                  class="button button-secondary"
+                  aria-label="Copiar imagem do meme para a área de transferência"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                  Copiar Meme
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-1"></div>
+
+      <!-- =========================================================================
+           QUIZ INTERATIVO DA LORE DO ALANZOKA (WCAG AAA)
+           ========================================================================= -->
+      <section class="section quiz-section" id="quiz" aria-labelledby="quiz-title">
+        <div class="container">
+          <div class="section-header">
+            <span class="tag" data-i18n="quiz.tag">Desafio Interativo</span>
+            <h2 class="title" id="quiz-title" data-i18n="quiz.title">Quiz Oficial do <span>Alanverso</span></h2>
+            <p class="subtitle" data-i18n="quiz.subtitle">
+              Teste seus conhecimentos sobre a história, bordões, jogos de terror e variantes dimensionais do Alanzoka!
+            </p>
+          </div>
+
+          <div class="quiz-wrapper" role="region" aria-label="Painel interativo do quiz">
+            <!-- Card Ativo do Quiz -->
+            <div class="quiz-card" id="quiz-card">
+              <div class="quiz-header">
+                <div class="quiz-header-meta">
+                  <span class="quiz-badge" id="quiz-category-badge">🧠 Alanologia Geral</span>
+                  <span class="quiz-counter" id="quiz-counter" aria-live="polite">Pergunta 1 de 6</span>
+                </div>
+                <div class="quiz-score-pill" id="quiz-score-pill" aria-label="Pontuação atual">
+                  <span aria-hidden="true">🏆</span> Pontos: <strong id="quiz-current-score">0</strong>
+                </div>
+              </div>
+
+              <!-- Barra de Progresso Acessível -->
+              <div
+                class="quiz-progress-track"
+                role="progressbar"
+                aria-label="Progresso do quiz"
+                aria-valuenow="1"
+                aria-valuemin="1"
+                aria-valuemax="6"
+                id="quiz-progress-bar"
+              >
+                <div class="quiz-progress-fill" id="quiz-progress-fill" style="width: 16.66%;"></div>
+              </div>
+
+              <!-- Pergunta e Opções -->
+              <div class="quiz-body">
+                <h3 class="quiz-question" id="quiz-question-text">
+                  Qual é a clássica reação do Alanzoka ao tomar susto em jogos de terror Indie?
+                </h3>
+
+                <div class="quiz-options-grid" id="quiz-options-grid" role="group" aria-label="Opções de resposta">
+                  <!-- Injetado dinamicamente via JS com botões type="button" -->
+                </div>
+
+                <!-- Feedback Acessível Imediato -->
+                <div id="quiz-feedback-box" class="quiz-feedback-box" aria-live="assertive" style="display: none;"></div>
+              </div>
+
+              <div class="quiz-footer">
+                <button type="button" id="quiz-next-btn" class="button" style="display: none;">
+                  Próxima Pergunta ➔
+                </button>
+              </div>
+            </div>
+
+            <!-- Card de Resultado Final (Exibido ao Concluir) -->
+            <div
+              class="quiz-result-card"
+              id="quiz-result-card"
+              style="display: none;"
+              role="region"
+              aria-label="Resultado final do quiz"
+            >
+              <div class="quiz-result-trophy" id="quiz-result-icon" aria-hidden="true">🎓</div>
+              <h3 id="quiz-result-title" class="quiz-result-title">Doutor em Alanologia!</h3>
+              <p id="quiz-result-desc" class="quiz-result-desc">
+                Você domina a lore do Alanverso com perfeição inigualável.
+              </p>
+              <div class="quiz-result-stats">
+                <div class="quiz-stat-item">
+                  <span class="quiz-stat-num" id="quiz-final-score">6/6</span>
+                  <span class="quiz-stat-lbl">Acertos</span>
+                </div>
+                <div class="quiz-stat-item">
+                  <span class="quiz-stat-num" id="quiz-final-percent">100%</span>
+                  <span class="quiz-stat-lbl">Aproveitamento</span>
+                </div>
+                <div class="quiz-stat-item">
+                  <span class="quiz-stat-num" id="quiz-final-record">6</span>
+                  <span class="quiz-stat-lbl">Recorde Salvo</span>
+                </div>
+              </div>
+              <div class="quiz-result-actions">
+                <button type="button" id="quiz-restart-btn" class="button">
+                  <span aria-hidden="true">🔄</span> Tentar Novamente
+                </button>
+                <button type="button" id="quiz-share-btn" class="button button-outline">
+                  <span aria-hidden="true">📢</span> Compartilhar Resultado
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-2"></div>
+
+      <!-- =========================================================================
+           GALERIA DE CONQUISTAS & PERFIL COM EXPORTAÇÃO JSON (WCAG AAA)
+           ========================================================================= -->
+      <section class="section achievements-section" id="achievements" aria-labelledby="achievements-title">
+        <div class="container">
+          <div class="section-header">
+            <span class="tag" data-i18n="achievements.tag">Gamificação & Perfil</span>
+            <h2 class="title" id="achievements-title" data-i18n="achievements.title">
+              Galeria de Troféus & <span>Conquistas</span>
+            </h2>
+            <p class="subtitle" data-i18n="achievements.subtitle">
+              Explore o Alanverso para desbloquear medalhas exclusivas salvas automaticamente no seu navegador ou exporte seu perfil JSON.
+            </p>
+          </div>
+
+          <!-- Card de Perfil & Progresso Geral -->
+          <div class="profile-card" role="region" aria-label="Painel de perfil e progresso de conquistas">
+            <div class="profile-header">
+              <div class="profile-avatar-wrapper">
+                <div class="profile-avatar" id="profile-avatar" aria-hidden="true">👑</div>
+                <div class="profile-user-info">
+                  <h3 id="profile-nickname">Viajante do Multiverso</h3>
+                  <span id="profile-rank-badge" class="rank-badge">Explorador Iniciante</span>
+                </div>
+              </div>
+
+              <!-- Controles de Ação do Perfil: Exportação JSON, Importação e Reset -->
+              <div class="profile-actions-toolbar">
+                <button
+                  type="button"
+                  id="btn-export-profile"
+                  class="button button-outline action-btn"
+                  title="Baixar seus troféus e preferências em arquivo JSON"
+                  aria-label="Exportar dados do perfil em arquivo JSON"
+                >
+                  <span aria-hidden="true">💾</span> Exportar Perfil (JSON)
+                </button>
+
+                <label
+                  for="input-import-profile"
+                  class="button button-outline action-btn import-label"
+                  title="Restaurar perfil a partir de arquivo JSON"
+                >
+                  <span aria-hidden="true">📂</span> Importar Perfil (JSON)
+                </label>
+                <input
+                  type="file"
+                  id="input-import-profile"
+                  accept=".json,application/json"
+                  class="sr-only"
+                  aria-label="Carregar arquivo JSON para importar conquistas"
+                />
+
+                <button
+                  type="button"
+                  id="btn-reset-achievements"
+                  class="button button-subtle action-btn reset-btn"
+                  title="Reiniciar todas as conquistas deste navegador"
+                  aria-label="Resetar progresso de conquistas"
+                >
+                  <span aria-hidden="true">🔄</span> Resetar
+                </button>
+              </div>
+            </div>
+
+            <!-- Barra de Progresso Global de Conquistas -->
+            <div class="profile-progress-block">
+              <div class="profile-progress-labels">
+                <span id="achievements-progress-text">Progresso Geral das Conquistas</span>
+                <span id="achievements-percentage-text" class="progress-percent-val">0% (0 de 10)</span>
+              </div>
+              <div
+                class="profile-progress-track"
+                role="progressbar"
+                aria-label="Progresso geral de troféus desbloqueados"
+                aria-valuenow="0"
+                aria-valuemin="0"
+                aria-valuemax="10"
+                id="achievements-progress-bar"
+              >
+                <div class="profile-progress-fill" id="achievements-progress-fill" style="width: 0%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Grade de Conquistas -->
+          <div class="achievements-grid" id="achievements-grid" role="list" aria-label="Lista de troféus desbloqueáveis">
+            <!-- Cards gerados via JS dinamicamente -->
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-2"></div>
+
+      <!-- MULTIVERSO LORE / SOBRE -->
+      <section class="section" id="about">
+        <div class="container">
+          <div class="lore-grid">
+            <div class="hero-media-wrapper">
+              <div class="hero-card">
+                <img
+                  src="https://pbs.twimg.com/media/EP-ZMkwWAAA-imz.jpg"
+                  alt="Alan e seu sósia misterioso"
+                  loading="lazy"
+                />
+                <div class="hero-card-caption">
+                  <span data-i18n="about.caption_title">Arquivo Confidencial #007</span>
+                  <span class="subtitle" data-i18n="about.caption_sub">Variantes em Convergência</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="lore-content">
+              <span class="tag" data-i18n="about.tag">A Teoria do Multiverso</span>
+              <h2 class="title" data-i18n="about.title">Quem é o Verdadeiro Alanzoka?</h2>
+              <p data-i18n="about.p1">
+                Segundo os maiores físicos quânticos da Twitch, Alan não é apenas um indivíduo,
+                mas uma anomalia temporal que se manifesta de múltiplas formas ao redor do mundo.
+              </p>
+              <p data-i18n="about.p2">
+                Cada transmissão ao vivo abre fendas dimensionais onde variantes de diferentes
+                realidades assumem o microfone:
+              </p>
+
+              <div class="multiverse-tags">
+                <span class="variant-pill" data-i18n="about.variant.normal">⭐ Alan Normal</span>
+                <span class="variant-pill" data-i18n="about.variant.mexican">🌮 Alan Mexicano</span>
+                <span class="variant-pill" data-i18n="about.variant.female">👑 Alan Mulher</span>
+                <span class="variant-pill" data-i18n="about.variant.cross">👀 Alan Vesgo</span>
+                <span class="variant-pill" data-i18n="about.variant.cry">😭 Alan Chorão</span>
+                <span class="variant-pill" data-i18n="about.variant.rage">⚡ Alan Full Pistola</span>
+                <span class="variant-pill" data-i18n="about.variant.intellectual">🧠 Alan Intelectual</span>
+                <span class="variant-pill" data-i18n="about.variant.romantic">🌹 Alan Romântico</span>
+                <span class="variant-pill" data-i18n="about.variant.emo">🎸 Alan Emo</span>
+                <span class="variant-pill" data-i18n="about.variant.hood">🍕 Alan da Quebrada</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-1"></div>
+
+      <!-- PERSONAGENS & REDES SOCIAIS -->
+      <section class="section" id="characters">
+        <div class="container">
+          <div class="section-header">
+            <span class="tag" data-i18n="characters.tag">Presença Digital</span>
+            <h2 class="title" data-i18n="characters.title">Alanzoka Pelas Redes Sociais</h2>
+            <p class="subtitle" data-i18n="characters.subtitle">Como cada rede social interpreta a essência mística do Alan.</p>
+          </div>
+
+          <div class="social-network-grid">
+            <div class="social-profile-card">
+              <img
+                src="https://uploads.spiritfanfiction.com/fanfics/capitulos/201911/game-alanzoka-e-jeon-jeongguk-17989200-301120191506.png"
+                alt="Foto de perfil estilo Facebook"
+                loading="lazy"
+              />
+              <h3>Facebook</h3>
+              <span class="tag-badge" data-i18n="characters.badge.family">Foto de Família</span>
+            </div>
+
+            <div class="social-profile-card">
+              <img
+                src="http://pm1.narvii.com/7751/9ce6c98a6f60c92343eebde1e1afe699323df9b1r1-400-400v2_00.jpg"
+                alt="Foto de perfil estilo Instagram"
+                loading="lazy"
+              />
+              <h3>Instagram</h3>
+              <span class="tag-badge" data-i18n="characters.badge.influencer">Influencer Top</span>
+            </div>
+
+            <div class="social-profile-card">
+              <img
+                src="https://pbs.twimg.com/profile_images/1354777602431528965/gKIdx-VT_400x400.jpg"
+                alt="Foto de perfil estilo Twitter"
+                loading="lazy"
+              />
+              <h3>Twitter / X</h3>
+              <span class="tag-badge" data-i18n="characters.badge.rants">Reclamações & Rants</span>
+            </div>
+
+            <div class="social-profile-card">
+              <img
+                src="https://pics.me.me/thumb_alanzoka-36326038.png"
+                alt="Foto de perfil estilo LinkedIn"
+                loading="lazy"
+              />
+              <h3>LinkedIn</h3>
+              <span class="tag-badge" data-i18n="characters.badge.ceo">CEO de Barulhos</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-2"></div>
+
+      <!-- DEPOIMENTOS / TESTIMONIALS (SWIPER) -->
+      <section class="section testimonials-section" id="testimonials">
+        <div class="container">
+          <div class="section-header">
+            <span class="tag" data-i18n="testimonials.tag">Testemunhos Oficiais</span>
+            <h2 class="title" data-i18n="testimonials.title">O Que Dizem Sobre o Alan</h2>
+            <p class="subtitle" data-i18n="testimonials.subtitle">Relatos reais de quem convive ou acompanha de perto essa entidade.</p>
+          </div>
+
+          <div class="swiper testimonials-swiper">
+            <div class="swiper-wrapper">
+              <!-- Slide 1 -->
+              <div class="swiper-slide">
+                <div class="testimonial-card">
+                  <p data-i18n="testimonials.t1.text">
+                    "Lindo, maravilhoso, companheiro de todas as horas! O único detalhe é
+                    que ele faz barulho até dormindo, mas a gente ama mesmo assim."
+                  </p>
+                  <div class="testimonial-author">
+                    <img
+                      src="https://i1.sndcdn.com/artworks-000378499812-ueus86-t500x500.jpg"
+                      alt="Avatar de Maethe"
+                      loading="lazy"
+                    />
+                    <div>
+                      <h3>Maethe</h3>
+                      <span data-i18n="testimonials.t1.role">Companheira de Aventuras</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="swiper-slide">
+                <div class="testimonial-card">
+                  <p data-i18n="testimonials.t2.text">
+                    "Só estamos na casa pela ração premium e pelos sachês. Quando ele começa a gritar
+                    no joguinho de terror, a gente simplesmente vai dormir no outro quarto."
+                  </p>
+                  <div class="testimonial-author">
+                    <img
+                      src="https://static.quizur.com/i/b/59a320f8ae6fc4.1987066359a320f8725e80.76888033.jpg"
+                      alt="Gatos do Alanzoka"
+                      loading="lazy"
+                    />
+                    <div>
+                      <h3>Gatos do Alan</h3>
+                      <span data-i18n="testimonials.t2.role">Críticos Felinos</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="swiper-slide">
+                <div class="testimonial-card">
+                  <p data-i18n="testimonials.t3.text">
+                    "Eu não sei que horas ele dorme. São três da manhã e eu ouço ele rindo
+                    e atirando de metralhadora virtual. Mas pelo menos anima o prédio."
+                  </p>
+                  <div class="testimonial-author">
+                    <img
+                      src="https://i.pinimg.com/564x/19/98/8e/19988ecccb47bc84fb6a9cfef5145ceb.jpg"
+                      alt="Vizinho do Alan"
+                      loading="lazy"
+                    />
+                    <div>
+                      <h3>O Vizinho</h3>
+                      <span data-i18n="testimonials.t3.role">Testemunha Ocular</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 4 -->
+              <div class="swiper-slide">
+                <div class="testimonial-card">
+                  <p data-i18n="testimonials.t4.text">
+                    "O melhor criador de conteúdo do Brasil! Acompanho desde o começo e
+                    até hoje não descobrimos quantos anos ele tem de verdade."
+                  </p>
+                  <div class="testimonial-author">
+                    <img
+                      src="https://imageproxy.ifunny.co/crop:x-20,resize:640x,quality:90x75/images/c0bd87fa02c0c386ce5deaab49ca75c7123464269b6e47d9b53a1551b4a40666_1.jpg"
+                      alt="Comunidade de Inscritos"
+                      loading="lazy"
+                    />
+                    <div>
+                      <h3>Chat da Twitch</h3>
+                      <span data-i18n="testimonials.t4.role">Chat Mais Rápido do Oeste</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Paginação do Swiper -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-1"></div>
+
+      <!-- CANAIS & LINKS DE CONTATO -->
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="section-header">
+            <span class="tag">Onde Encontrar</span>
+            <h2 class="title">Canais Oficiais do Alanzoka</h2>
+            <p class="subtitle">Conecte-se e assista às transmissões nas principais plataformas.</p>
+          </div>
+
+          <div class="channels-grid">
+            <div class="channel-card">
+              <div class="channel-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M21 2H3v16h5v4l4-4h5l4-4V2zm-10 9V7m5 4V7"></path>
+                </svg>
+              </div>
+              <h3>Twitch TV</h3>
+              <p>Lives diárias com gameplays insanas, bate-papo e risadas garantidas.</p>
+              <a
+                href="https://www.twitch.tv/alanzoka"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button"
+                aria-label="Abrir Twitch do Alanzoka em nova aba"
+              >
+                Assistir na Twitch
+              </a>
+            </div>
+
+            <div class="channel-card">
+              <div class="channel-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"
+                  ></path>
+                  <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                </svg>
+              </div>
+              <h3>YouTube</h3>
+              <p>Melhores momentos, vídeos editados e cortes dos jogos mais jogados.</p>
+              <a
+                href="https://www.youtube.com/c/alanzoka"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button button-secondary"
+                aria-label="Abrir canal do YouTube do Alanzoka em nova aba"
+              >
+                Inscrever-se no YouTube
+              </a>
+            </div>
+
+            <div class="channel-card">
+              <div class="channel-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </div>
+              <h3>Instagram</h3>
+              <p>Bastidores da vida real, fotos com a Maethe e novidades exclusivas.</p>
+              <a
+                href="https://www.instagram.com/alanzoka/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button button-secondary"
+                aria-label="Abrir Instagram do Alanzoka em nova aba"
+              >
+                Seguir no Instagram
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =========================================================================
+         FOOTER
+         ========================================================================= -->
+    <footer role="contentinfo">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <a class="logo" href="#home">Alan<span>verso</span></a>
+            <p style="margin-top: 1rem; max-width: 24rem;">
+              Um tributo carinhoso da comunidade para o Alanzoka e todos os clipes que trazem
+              sorrisos diários para milhões de pessoas.
+            </p>
+          </div>
+
+          <div>
+            <h4>Navegação Rápida</h4>
+            <ul>
+              <li><a href="#home">Início</a></li>
+              <li><a href="#memes">Memes</a></li>
+              <li><a href="#soundboard">Soundboard</a></li>
+              <li><a href="#clips">Clipes</a></li>
+              <li><a href="#meme-generator">Gerador de Memes</a></li>
+              <li><a href="#about">Multiverso</a></li>
+              <li><a href="#testimonials">Depoimentos</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4>Comunidade</h4>
+            <ul>
+              <li><a href="https://www.twitch.tv/alanzoka" target="_blank" rel="noopener">Twitch</a></li>
+              <li><a href="https://www.youtube.com/c/alanzoka" target="_blank" rel="noopener">YouTube</a></li>
+              <li><a href="https://www.instagram.com/alanzoka/" target="_blank" rel="noopener">Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 Alanverso Showcase. Desenvolvido com carinho para os fãs do Alanzoka.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <a href="#home" class="back-to-top" aria-label="Voltar ao topo da página">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </a>
+
+    <!-- =========================================================================
+         MODAL INTERATIVO (LIGHTBOX DE MEMES & ENVIO DE FÃ)
+         ========================================================================= -->
+    <div
+      id="fan-modal"
+      class="modal-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+      aria-labelledby="modal-meme-title"
+    >
+      <div class="modal-container">
+        <div class="modal-header">
+          <h3 id="modal-meme-title">Galeria do Alanverso</h3>
+          <button
+            id="modal-close-btn"
+            class="modal-close-btn"
+            type="button"
+            aria-label="Fechar janela modal"
+          >
+            ✕
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <img
+            id="modal-preview-img"
+            src=""
+            alt=""
+            style="display: none"
+          />
+          <p id="modal-meme-desc" class="subtitle" style="margin-bottom: 1.5rem;"></p>
+
+          <form id="fan-submission-form">
+            <h4 style="margin-bottom: 1rem; color: var(--title-color);">
+              Envie sua Sugestão de Meme ou Clipe
+            </h4>
+            <div class="form-group">
+              <label for="fan-nickname">Seu Nick / Nome:</label>
+              <input
+                type="text"
+                id="fan-nickname"
+                placeholder="Ex: TijolinhoGamer"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="fan-category">Categoria do Momento:</label>
+              <select id="fan-category">
+                <option value="joguinho">Susto em Jogo de Terror</option>
+                <option value="metralhadora">Grito / Metralhadora</option>
+                <option value="romance">Paquera com a Cremosa</option>
+                <option value="lore">Outra Variante do Multiverso</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="fan-link">Link do Clipe ou Descrição:</label>
+              <textarea
+                id="fan-link"
+                rows="3"
+                placeholder="Cole o link da Twitch/YouTube ou descreva o momento épico..."
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="button" style="width: 100%;">
+              Enviar para o Alanverso 🚀
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         MODAL INTERATIVO: PLAYER DE VÍDEOS & CLIPES COM CONTROLE DE REPRODUÇÃO
+         ========================================================================= -->
+    <div
+      id="video-modal"
+      class="modal-overlay video-modal-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+      aria-labelledby="video-modal-title"
+    >
+      <div class="modal-container video-player-container">
+        <div class="modal-header">
+          <div>
+            <span class="video-modal-game-badge" id="video-modal-badge">🎮 Alanzoka Clipes</span>
+            <h3 id="video-modal-title">Título do Clipe</h3>
+          </div>
+          <button
+            id="video-modal-close-btn"
+            class="modal-close-btn"
+            type="button"
+            aria-label="Fechar player de clipe"
+          >
+            ✕
+          </button>
+        </div>
+
+        <div class="video-player-screen" id="video-screen">
+          <canvas id="video-scene-canvas" width="640" height="360" aria-label="Tela de reprodução do clipe interativo"></canvas>
+          <button type="button" class="video-play-center-btn" id="video-center-play-trigger" aria-label="Iniciar reprodução do clipe">
+            <span aria-hidden="true">▶</span>
+          </button>
+        </div>
+
+        <!-- Barra de Controles de Reprodução -->
+        <div class="video-player-controls">
+          <button
+            type="button"
+            id="video-btn-play-pause"
+            class="v-ctrl-btn"
+            aria-label="Alternar entre reproduzir e pausar"
+          >
+            ▶
+          </button>
+
+          <div class="video-progress-wrapper">
+            <label for="video-seek-bar" class="sr-only">Progresso do vídeo</label>
+            <input
+              type="range"
+              id="video-seek-bar"
+              min="0"
+              max="100"
+              value="0"
+              aria-label="Barra de progresso do vídeo"
+            />
+            <div class="video-time-display">
+              <span id="video-current-time">00:00</span> / <span id="video-total-duration">00:48</span>
+            </div>
+          </div>
+
+          <div class="video-vol-wrapper">
+            <button
+              type="button"
+              id="video-btn-mute"
+              class="v-ctrl-btn"
+              aria-label="Ativar ou desativar som do clipe"
+            >
+              🔊
+            </button>
+            <label for="video-vol-slider" class="sr-only">Volume do player</label>
+            <input
+              type="range"
+              id="video-vol-slider"
+              min="0"
+              max="1"
+              step="0.05"
+              value="0.8"
+              aria-label="Volume do player"
+            />
+          </div>
+
+          <button
+            type="button"
+            id="video-btn-fullscreen"
+            class="v-ctrl-btn"
+            aria-label="Alternar tela cheia"
+          >
+            ⛶
+          </button>
+        </div>
+
+        <div class="video-details-box">
+          <p id="video-modal-desc" class="video-desc-text"></p>
+          <div class="video-details-footer">
+            <span id="video-modal-views" class="video-meta-views">👁 1.2M views</span>
+            <div class="video-social-share">
+              <button type="button" id="btn-share-clip" class="button button-outline" style="padding: 0.5rem 1rem;">
+                🔗 Copiar Link do Clipe
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         MODAL DE ATALHOS DE TECLADO (WCAG AAA)
+         ========================================================================= -->
+    <div
+      id="shortcuts-modal"
+      class="modal-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+      aria-labelledby="shortcuts-modal-title"
+    >
+      <div class="modal-container shortcuts-modal-box">
+        <div class="modal-header">
+          <h3 id="shortcuts-modal-title">⌨️ Atalhos de Teclado</h3>
+          <button
+            id="shortcuts-modal-close-btn"
+            class="modal-close-btn"
+            type="button"
+            aria-label="Fechar guia de atalhos"
+          >
+            ✕
+          </button>
+        </div>
+        <div class="modal-body">
+          <p class="subtitle" style="margin-bottom: 1.25rem;">
+            Navegue pelo Alanverso com máxima velocidade e total acessibilidade.
+          </p>
+          <ul class="shortcuts-list">
+            <li><kbd>?</kbd> <span>Abrir / fechar este guia de atalhos</span></li>
+            <li><kbd>/</kbd> <span>Focar no campo de busca de clipes</span></li>
+            <li><kbd>T</kbd> <span>Alternar tema Escuro / Claro</span></li>
+            <li><kbd>C</kbd> <span>Alternar modo de Alto Contraste (AAA)</span></li>
+            <li><kbd>L</kbd> <span>Alternar idioma (Português / English)</span></li>
+            <li><kbd>Esc</kbd> <span>Fechar qualquer modal aberto</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!-- ScrollReveal JS -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Módulo i18n Bilíngue -->
+    <script src="i18n.js"></script>
+    <!-- Main JS -->
+    <script src="main.js"></script>
+  </body>
+</html>

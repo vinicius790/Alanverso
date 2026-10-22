@@ -1,0 +1,24 @@
+{
+  "name": "alanverso",
+  "version": "3.0.0",
+  "description": "O Multiverso Definitivo do Alanzoka - Portal interativo com memes, soundboard Web Audio, central de clipes, quiz oficial, sistema de conquistas, PWA e acessibilidade WCAG 2.2 AAA.",
+  "main": "main.js",
+  "scripts": {
+    "test": "node --test tests/dom.test.js tests/responsive.test.js tests/features.test.js",
+    "test:legacy": "node --test tests/test_dom.js tests/test_responsive.js tests/features.test.js",
+    "lint": "node --check main.js && node --check i18n.js && node --check sw.js && node --check tests/features.test.js"
+  },
+  "keywords": [
+    "alanzoka",
+    "alanverso",
+    "multiverse",
+    "soundboard",
+    "web-audio-api",
+    "quiz",
+    "achievements",
+    "pwa",
+    "wcag-aaa"
+  ],
+  "author": "Alanverso Showcase",
+  "license": "MIT"
+}

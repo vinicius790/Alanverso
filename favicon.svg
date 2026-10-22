@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9333ea"/>
+      <stop offset="50%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#c026d3"/>
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+  </defs>
+  <!-- Background Rounded Squircle -->
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="url(#bgGrad)" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+  <!-- Multiverse Orbital Ring -->
+  <ellipse cx="32" cy="32" rx="26" ry="10" fill="none" stroke="url(#glowGrad)" stroke-width="2.5" stroke-dasharray="3 2" transform="rotate(-25 32 32)"/>
+  <!-- Stylized Letter 'A' -->
+  <path d="M32 14 L45 46 L38 46 L34.5 37 L29.5 37 L26 46 L19 46 Z M32 23.5 L30.5 32 L33.5 32 Z" fill="#ffffff" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.3))"/>
+  <!-- Glowing Sparkle / Star -->
+  <circle cx="44" cy="18" r="2.5" fill="#fbbf24"/>
+  <circle cx="18" cy="42" r="1.5" fill="#f43f5e"/>
+</svg>

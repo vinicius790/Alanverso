@@ -1,0 +1,112 @@
+name: CI - Validação e Qualidade de Código
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validacao-e-testes:
+    name: Lint, Testes DOM e Validação HTML/CSS
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Verificar sintaxe JavaScript
+        run: |
+          node --check main.js
+          node --check i18n.js
+          node --check sw.js
+          node --check tests/features.test.js
+          node --check tests/test_dom.js
+          node --check tests/test_responsive.js
+
+      - name: Executar suite completa de testes
+        run: node --test tests/dom.test.js tests/responsive.test.js tests/features.test.js
+
+      - name: Validação e Linter de HTML (htmlhint)
+        run: |
+          npx --yes htmlhint "**/*.html" --rules "tagname-lowercase,attr-lowercase,attr-value-double-quotes,tag-pair,id-unique,src-not-empty,title-require"
+
+      - name: Validação estrutural de folhas de estilo CSS
+        run: |
+          node -e "
+            const fs = require('fs');
+            const css = fs.readFileSync('style.css', 'utf8');
+            const openBraces = (css.match(/{/g) || []).length;
+            const closeBraces = (css.match(/}/g) || []).length;
+            if (openBraces !== closeBraces) {
+              console.error('Erro: Chaves desbalanceadas no CSS (' + openBraces + ' abertas vs ' + closeBraces + ' fechadas)');
+              process.exit(1);
+            }
+            console.log('Folha style.css validada estruturalmente com sucesso.');
+          "
+
+  auditoria-seguranca:
+    name: Auditoria DevSecOps & Integridade
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Verificar codificação UTF-8 e integridade dos arquivos
+        run: |
+          node -e "
+            const fs = require('fs');
+            const arquivos = ['index.html', 'Javascript.html', 'style.css', 'main.js', 'README.md'];
+            let erros = 0;
+            for (const f of arquivos) {
+              if (!fs.existsSync(f)) continue;
+              const buf = fs.readFileSync(f);
+              if (buf.length >= 3 && buf[0] === 0xef && buf[1] === 0xbb && buf[2] === 0xbf) {
+                console.error(f + ' contém UTF-8 BOM proibido');
+                erros++;
+              }
+              const texto = buf.toString('utf8');
+              if (/[\ufffd]/.test(texto)) {
+                console.error(f + ' contém caracteres corrompidos (mojibake / 0xFFFD)');
+                erros++;
+              }
+            }
+            if (erros > 0) process.exit(1);
+            console.log('Codificação UTF-8 verificada com sucesso.');
+          "
+
+      - name: Varredura de credenciais e segredos em texto plano
+        run: |
+          node -e "
+            const fs = require('fs');
+            const arquivos = ['index.html', 'Javascript.html', 'style.css', 'main.js'];
+            const padraoSegredo = /(api[_-]?key|secret|token|password)\s*[:=]\s*['\"][a-zA-Z0-9_\-]{16,}['\"]/i;
+            let falha = false;
+            for (const f of arquivos) {
+              if (!fs.existsSync(f)) continue;
+              const conteudo = fs.readFileSync(f, 'utf8');
+              if (padraoSegredo.test(conteudo)) {
+                console.error('Possível segredo ou chave exposta encontrada em: ' + f);
+                falha = true;
+              }
+            }
+            if (falha) process.exit(1);
+            console.log('Nenhum segredo ou chave privada exposta.');
+          "

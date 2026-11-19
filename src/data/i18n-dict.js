@@ -1,13 +1,10 @@
 /**
- * ALANVERSO - INTERNATIONALIZATION (i18n) MODULE
- * Suporte bilíngue dinâmico: Português (pt-BR) e Inglês (en)
- * Compatível com navegador (DOM) e Node.js (Test Runner).
+ * ALANVERSO v5.0.0 - DICIONÁRIO BILÍNGUE (pt-BR / en)
  */
-'use strict';
 
-const alanversoTranslations = {
+export const ALANVERSO_TRANSLATIONS = {
   'pt-BR': {
-    // Accessibility & Navigation
+    // Acessibilidade & Navegação
     'skip.main': 'Pular para o conteúdo principal',
     'skip.memes': 'Pular para a galeria de memes',
     'skip.soundboard': 'Pular para o soundboard interativo',
@@ -37,7 +34,7 @@ const alanversoTranslations = {
     'nav.shortcuts_toggle': 'Abrir guia de atalhos de teclado',
     'nav.menu_toggle': 'Abrir menu de navegação',
 
-    // Hero Section
+    // Hero
     'hero.title': 'O Multiverso Absoluto do <span>Alanzoka</span>',
     'hero.subtitle':
       'De jogatinas memoráveis a reações épicas que marcaram a internet brasileira. Prepare-se para reviver as melhores fases, caretas e lendas da live!',
@@ -46,7 +43,7 @@ const alanversoTranslations = {
     'hero.card_caption': 'Modo Full Metralhadora',
     'hero.card_badge': 'AO VIVO',
 
-    // Memes Section
+    // Memes
     'memes.tag': 'Momentos de Ouro',
     'memes.title': 'Reações Que Viraram História',
     'memes.subtitle':
@@ -69,42 +66,42 @@ const alanversoTranslations = {
     'memes.card4.badge': 'Classificação: Drama',
     'memes.btn_expand': 'Ampliar 🔍',
 
-    // Soundboard Section
+    // Soundboard
     'soundboard.tag': 'Áudio & Efeitos',
     'soundboard.title': 'Soundboard Interativo do <span>Alanzoka</span>',
     'soundboard.subtitle':
-      'Efeitos sintetizados em tempo real com Web Audio API, frases épicas e visualizador osciloscópio dinâmico em Canvas.',
+      'Efeitos sintetizados em tempo real com Web Audio API, eco/bass boost, bordões e visualizador osciloscópio dinâmico em Canvas.',
 
-    // Clips Section
+    // Clipes
     'clips.tag': 'Galeria Multimídia',
     'clips.title': 'Central de Vídeos & <span>Clipes Lendários</span>',
     'clips.subtitle':
-      'Reviva os melhores momentos da carreira do Alan com filtros temáticos, busca instantânea e player multimídia interativo.',
+      'Reviva os melhores momentos da carreira do Alan com busca instantânea, favoritos salvos e player multimídia interativo.',
     'clips.search_placeholder': 'Buscar clipe por título, jogo ou momento (Atalho: /)...',
     'clips.sort_label': 'Ordenar por:',
     'clips.sort_views': 'Mais Vistos',
     'clips.sort_duration': 'Maior Duração',
     'clips.sort_alpha': 'Ordem Alfabética (A-Z)',
 
-    // Meme Generator Section
+    // Gerador de Memes
     'generator.tag': 'Fábrica de Memes',
     'generator.title': 'Gerador de Memes do <span>Alanzoka</span>',
     'generator.subtitle':
-      'Crie memes lendários com renderização direta no Canvas HTML5, personalize legendas, escolha as caretas mais icônicas e baixe o PNG em alta resolução!',
+      'Crie memes lendários com renderização no Canvas HTML5, filtros visuais, carimbos exclusivos e download em PNG de alta resolução!',
 
-    // Quiz Section
+    // Quiz
     'quiz.tag': 'Desafio Interativo',
     'quiz.title': 'Quiz Oficial do <span>Alanverso</span>',
     'quiz.subtitle':
       'Teste seus conhecimentos sobre a história, bordões, jogos de terror e variantes dimensionais do Alanzoka!',
 
-    // Achievements & Profile Section
+    // Conquistas & Perfil
     'achievements.tag': 'Gamificação & Perfil',
     'achievements.title': 'Galeria de Troféus & <span>Conquistas</span>',
     'achievements.subtitle':
-      'Explore o Alanverso para desbloquear medalhas exclusivas salvas automaticamente no seu navegador ou exporte seu perfil JSON.',
+      'Explore o Alanverso para desbloquear medalhas exclusivas salvas automaticamente no navegador ou exporte seu perfil JSON.',
 
-    // Multiverse Section
+    // Multiverso / Lore
     'about.caption_title': 'Arquivo Confidencial #007',
     'about.caption_sub': 'Variantes em Convergência',
     'about.tag': 'A Teoria do Multiverso',
@@ -124,7 +121,7 @@ const alanversoTranslations = {
     'about.variant.emo': '🎸 Alan Emo',
     'about.variant.hood': '🍕 Alan da Quebrada',
 
-    // Characters / Social Section
+    // Personagens / Redes Sociais
     'characters.tag': 'Presença Digital',
     'characters.title': 'Alanzoka Pelas Redes Sociais',
     'characters.subtitle': 'Como cada rede social interpreta a essência mística do Alan.',
@@ -133,7 +130,7 @@ const alanversoTranslations = {
     'characters.badge.rants': 'Reclamações & Rants',
     'characters.badge.ceo': 'CEO de Barulhos',
 
-    // Testimonials Section
+    // Depoimentos
     'testimonials.tag': 'Testemunhos Oficiais',
     'testimonials.title': 'O Que Dizem Sobre o Alan',
     'testimonials.subtitle':
@@ -151,7 +148,7 @@ const alanversoTranslations = {
       '"O melhor criador de conteúdo do Brasil! Acompanho desde o começo e até hoje não descobrimos quantos anos ele tem de verdade."',
     'testimonials.t4.role': 'Chat Mais Rápido do Oeste',
 
-    // Channels Section
+    // Canais
     'contact.tag': 'Onde Encontrar',
     'contact.title': 'Canais Oficiais do Alanzoka',
     'contact.subtitle': 'Conecte-se e assista às transmissões nas principais plataformas.',
@@ -165,15 +162,15 @@ const alanversoTranslations = {
       'Bastidores da vida real, fotos com a Maethe e novidades exclusivas.',
     'contact.ig.btn': 'Seguir no Instagram',
 
-    // Footer
+    // Rodapé
     'footer.tagline':
       'Um tributo carinhoso da comunidade para o Alanzoka e todos os clipes que trazem sorrisos diários para milhões de pessoas.',
     'footer.quick_links': 'Navegação Rápida',
     'footer.community': 'Comunidade',
     'footer.rights':
-      '© 2026 Alanverso Showcase. Desenvolvido com carinho para os fãs do Alanzoka.',
+      '© 2026 Alanverso Showcase v5.0.0. Desenvolvido com carinho para os fãs do Alanzoka.',
 
-    // Modal & Form
+    // Modais e Formulários
     'modal.default_title': 'Galeria do Alanverso',
     'modal.form_title': 'Envie sua Sugestão de Meme ou Clipe',
     'modal.lbl_nick': 'Seu Nick / Nome:',
@@ -187,8 +184,8 @@ const alanversoTranslations = {
     'modal.ph_link': 'Cole o link da Twitch/YouTube ou descreva o momento épico...',
     'modal.btn_submit': 'Enviar para o Alanverso 🚀',
     'modal.close_label': 'Fechar janela modal',
-    'back_to_top': 'Voltar ao topo da página',
-    'a11y.lang_switched': 'Idioma alterado para Português.'
+    back_to_top: 'Voltar ao topo da página',
+    'a11y.lang_switched': 'Idioma alterado para Português.',
   },
   en: {
     // Accessibility & Navigation
@@ -221,7 +218,7 @@ const alanversoTranslations = {
     'nav.shortcuts_toggle': 'Open keyboard shortcuts guide',
     'nav.menu_toggle': 'Open navigation menu',
 
-    // Hero Section
+    // Hero
     'hero.title': 'The Absolute Multiverse of <span>Alanzoka</span>',
     'hero.subtitle':
       'From legendary gameplay sessions to epic reactions that shaped Brazilian internet culture. Relive the best eras, funny faces, and stream lore!',
@@ -230,7 +227,7 @@ const alanversoTranslations = {
     'hero.card_caption': 'Full Machine Gun Mode',
     'hero.card_badge': 'LIVE NOW',
 
-    // Memes Section
+    // Memes
     'memes.tag': 'Golden Moments',
     'memes.title': 'Reactions That Made History',
     'memes.subtitle':
@@ -252,42 +249,42 @@ const alanversoTranslations = {
     'memes.card4.badge': 'Rating: Drama',
     'memes.btn_expand': 'Zoom In 🔍',
 
-    // Soundboard Section
+    // Soundboard
     'soundboard.tag': 'Audio & Effects',
     'soundboard.title': 'Interactive <span>Alanzoka</span> Soundboard',
     'soundboard.subtitle':
-      'Real-time Web Audio API synthesized effects, iconic catchphrases, and dynamic Canvas oscilloscope visualizer.',
+      'Real-time Web Audio API synthesized effects, echo/bass boost FX, catchphrases, and dynamic Canvas oscilloscope visualizer.',
 
-    // Clips Section
+    // Clips
     'clips.tag': 'Multimedia Hub',
     'clips.title': 'Legendary Videos & <span>Clips Hub</span>',
     'clips.subtitle':
-      "Relive the greatest moments of Alan's career with thematic filters, instant search, and an interactive media player.",
+      "Relive the greatest moments of Alan's career with instant search, saved favorites, and an interactive media player.",
     'clips.search_placeholder': 'Search clips by title, game, or moment (Shortcut: /)...',
     'clips.sort_label': 'Sort by:',
     'clips.sort_views': 'Most Viewed',
     'clips.sort_duration': 'Longest Duration',
     'clips.sort_alpha': 'Alphabetical (A-Z)',
 
-    // Meme Generator Section
+    // Meme Generator
     'generator.tag': 'Meme Factory',
     'generator.title': '<span>Alanzoka</span> Meme Generator',
     'generator.subtitle':
-      'Create legendary memes rendered directly on HTML5 Canvas, customize captions, pick iconic faces, and download high-res PNGs!',
+      'Create legendary memes rendered on HTML5 Canvas, add visual filters, exclusive stamps, and download high-res PNGs!',
 
-    // Quiz Section
+    // Quiz
     'quiz.tag': 'Interactive Challenge',
     'quiz.title': 'Official <span>Alanverso</span> Quiz',
     'quiz.subtitle':
       'Test your knowledge about Alanzoka lore, catchphrases, horror games, and dimensional variants!',
 
-    // Achievements & Profile Section
+    // Achievements
     'achievements.tag': 'Gamification & Profile',
     'achievements.title': 'Trophy Room & <span>Achievements</span>',
     'achievements.subtitle':
       'Explore the Alanverso to unlock exclusive badges saved in your browser or export your profile as JSON.',
 
-    // Multiverse Section
+    // Multiverse
     'about.caption_title': 'Confidential File #007',
     'about.caption_sub': 'Variants in Convergence',
     'about.tag': 'The Multiverse Theory',
@@ -307,7 +304,7 @@ const alanversoTranslations = {
     'about.variant.emo': '🎸 Emo Alan',
     'about.variant.hood': '🍕 Hood Alan',
 
-    // Characters / Social Section
+    // Characters
     'characters.tag': 'Digital Presence',
     'characters.title': 'Alanzoka Across Social Media',
     'characters.subtitle': 'How each platform interprets the mystical essence of Alan.',
@@ -316,7 +313,7 @@ const alanversoTranslations = {
     'characters.badge.rants': 'Rants & Complaints',
     'characters.badge.ceo': 'CEO of Noise',
 
-    // Testimonials Section
+    // Testimonials
     'testimonials.tag': 'Official Testimonials',
     'testimonials.title': 'What They Say About Alan',
     'testimonials.subtitle':
@@ -334,7 +331,7 @@ const alanversoTranslations = {
       '"The best content creator in Brazil! Followed him from the very start and to this day nobody knows his actual age."',
     'testimonials.t4.role': 'Fastest Chat in the West',
 
-    // Channels Section
+    // Channels
     'contact.tag': 'Where to Find',
     'contact.title': 'Alanzoka Official Channels',
     'contact.subtitle': 'Connect and watch live broadcasts on the main platforms.',
@@ -354,7 +351,7 @@ const alanversoTranslations = {
     'footer.quick_links': 'Quick Navigation',
     'footer.community': 'Community',
     'footer.rights':
-      '© 2026 Alanverso Showcase. Crafted with care for Alanzoka fans.',
+      '© 2026 Alanverso Showcase v5.0.0. Crafted with care for Alanzoka fans.',
 
     // Modal & Form
     'modal.default_title': 'Alanverso Gallery',
@@ -370,168 +367,7 @@ const alanversoTranslations = {
     'modal.ph_link': 'Paste the Twitch/YouTube link or describe the epic moment...',
     'modal.btn_submit': 'Submit to the Alanverso 🚀',
     'modal.close_label': 'Close modal window',
-    'back_to_top': 'Back to top of page',
-    'a11y.lang_switched': 'Language switched to English.'
-  }
+    back_to_top: 'Back to top of page',
+    'a11y.lang_switched': 'Language switched to English.',
+  },
 };
-
-class I18nManager {
-  constructor() {
-    this.currentLang = this.getSavedLanguage();
-    if (typeof document !== 'undefined') {
-      this.init();
-    }
-  }
-
-  getSavedLanguage() {
-    try {
-      if (typeof localStorage !== 'undefined') {
-        const saved = localStorage.getItem('alanverso-lang');
-        if (saved && (saved === 'en' || saved === 'pt-BR')) {
-          return saved;
-        }
-      }
-    } catch {
-      // Storage indisponível
-    }
-    if (typeof navigator !== 'undefined' && navigator.language) {
-      const browserLang = navigator.language.toLowerCase();
-      if (browserLang.startsWith('en')) {
-        return 'en';
-      }
-    }
-    return 'pt-BR';
-  }
-
-  init() {
-    this.applyLanguage(this.currentLang, false);
-
-    const toggleBtn = document.getElementById('lang-toggle');
-    if (toggleBtn) {
-      toggleBtn.addEventListener('click', () => {
-        const nextLang = this.currentLang === 'pt-BR' ? 'en' : 'pt-BR';
-        this.setLanguage(nextLang);
-      });
-    }
-  }
-
-  setLanguage(lang) {
-    if (!alanversoTranslations[lang]) {
-      lang = 'pt-BR';
-    }
-    this.currentLang = lang;
-    try {
-      if (typeof localStorage !== 'undefined') {
-        localStorage.setItem('alanverso-lang', lang);
-      }
-    } catch {
-      // Storage indisponível
-    }
-    this.applyLanguage(lang, true);
-    if (typeof window !== 'undefined' && typeof window.dispatchEvent === 'function') {
-      try {
-        window.dispatchEvent(new CustomEvent('alanverso:language-changed', { detail: { lang } }));
-      } catch {
-        // Fallback para ambientes sem CustomEvent
-      }
-    }
-  }
-
-  sanitizeHtml(dirty) {
-    if (typeof dirty !== 'string') return '';
-    if (typeof DOMParser !== 'undefined') {
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(dirty, 'text/html');
-      const allowedTags = new Set(['SPAN', 'STRONG', 'EM', 'B', 'I', 'BR', 'SMALL']);
-      const nodes = doc.body.querySelectorAll('*');
-      nodes.forEach(node => {
-        if (!allowedTags.has(node.tagName)) {
-          node.remove();
-        } else {
-          Array.from(node.attributes).forEach(attr => {
-            if (!['class', 'title', 'aria-hidden'].includes(attr.name.toLowerCase())) {
-              node.removeAttribute(attr.name);
-            }
-          });
-        }
-      });
-      return doc.body.innerHTML;
-    }
-    // Fallback seguro em ambiente sem DOMParser (ex.: Node.js test runner)
-    return dirty
-      .replace(/<script[\s\S]*?>[\s\S]*?<\/script>/gi, '')
-      .replace(/<(?!\/?(?:span|strong|em|b|i|br|small)\b)[^>]+>/gi, '')
-      .replace(/\son\w+\s*=\s*(?:"[^"]*"|'[^']*'|[^\s>]+)/gi, '');
-  }
-
-  applyLanguage(lang, announce = true) {
-    if (typeof document === 'undefined') return;
-    const dict = alanversoTranslations[lang] || alanversoTranslations['pt-BR'];
-    document.documentElement.lang = lang;
-
-    // Translate elements with data-i18n
-    const elements = document.querySelectorAll('[data-i18n]');
-    elements.forEach(el => {
-      const key = el.getAttribute('data-i18n');
-      if (dict[key]) {
-        if (dict[key].includes('<') && dict[key].includes('>')) {
-          el.innerHTML = this.sanitizeHtml(dict[key]);
-        } else {
-          el.textContent = dict[key];
-        }
-      }
-    });
-
-    // Translate attributes like placeholder, title, aria-label
-    const attrElements = document.querySelectorAll('[data-i18n-attr]');
-    attrElements.forEach(el => {
-      const mappings = el.getAttribute('data-i18n-attr').split(',');
-      mappings.forEach(pair => {
-        const [attr, key] = pair.split(':').map(s => s.trim());
-        if (attr && key && dict[key]) {
-          el.setAttribute(attr, dict[key]);
-        }
-      });
-    });
-
-    // Update toggle button visuals
-    const currentLangSpan = document.getElementById('current-lang');
-    const toggleBtn = document.getElementById('lang-toggle');
-    if (currentLangSpan) {
-      currentLangSpan.textContent = dict['nav.lang_badge'];
-    }
-    if (toggleBtn) {
-      toggleBtn.setAttribute('aria-label', dict['nav.lang_label']);
-      toggleBtn.setAttribute('title', dict['nav.lang_label']);
-    }
-
-    // Accessibility announcement
-    if (announce) {
-      const liveRegion = document.getElementById('a11y-live-region');
-      if (liveRegion) {
-        liveRegion.textContent = '';
-        setTimeout(() => {
-          liveRegion.textContent = dict['a11y.lang_switched'];
-        }, 50);
-      }
-    }
-  }
-}
-
-let alanversoI18n = null;
-
-if (typeof document !== 'undefined') {
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {
-      alanversoI18n = new I18nManager();
-      if (typeof window !== 'undefined') window.alanversoI18n = alanversoI18n;
-    });
-  } else {
-    alanversoI18n = new I18nManager();
-    if (typeof window !== 'undefined') window.alanversoI18n = alanversoI18n;
-  }
-}
-
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { alanversoTranslations, I18nManager };
-}

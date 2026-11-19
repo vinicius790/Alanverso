@@ -1,0 +1,184 @@
+/* --------------------------------------------------------------------------
+   MULTIVERSO LORE, PERSONAGENS, DEPOIMENTOS & CANAIS
+   -------------------------------------------------------------------------- */
+.lore-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.lore-content h2 {
+  font-size: 2.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.lore-content p {
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.multiverse-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.variant-pill {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--title-color);
+  transition: var(--transition);
+}
+
+.variant-pill:hover {
+  background: var(--base-color);
+  color: #ffffff;
+  border-color: var(--base-color);
+}
+
+.social-network-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.social-profile-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.social-profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.social-profile-card img {
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1rem auto;
+  border: 3px solid var(--base-color);
+}
+
+.social-profile-card h3,
+.social-profile-card h4 {
+  color: var(--title-color);
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.social-profile-card .tag-badge {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  background: var(--base-color-subtle);
+  color: var(--base-color);
+  font-weight: 600;
+}
+
+.testimonials-section {
+  background: var(--card-bg);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.testimonial-card {
+  background: var(--body-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.testimonial-card p {
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--title-color);
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.testimonial-author img {
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--base-color);
+}
+
+.testimonial-author h3,
+.testimonial-author h4 {
+  font-size: 1rem;
+  color: var(--title-color);
+}
+
+.testimonial-author span {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.channels-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.channel-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.channel-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--base-color);
+  box-shadow: var(--shadow-md);
+}
+
+.channel-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  background: var(--base-color-subtle);
+  color: var(--base-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem auto;
+}
+
+.channel-card h3 {
+  color: var(--title-color);
+  margin-bottom: 0.5rem;
+}
+
+.channel-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+}
+

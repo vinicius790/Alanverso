@@ -1,0 +1,140 @@
+/* ==========================================================================
+   ALANVERSO v5.0.0 - RESPONSIVIDADE E PREFERÊNCIAS DE SISTEMA
+   ========================================================================== */
+
+@media (max-width: 992px) {
+  #home .hero-grid,
+  .lore-grid,
+  .meme-generator-layout {
+    grid-template-columns: 1fr;
+  }
+
+  #home .hero-grid,
+  .lore-grid {
+    text-align: center;
+  }
+
+  .hero-text p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  footer .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .toggle-menu-btn {
+    display: flex;
+  }
+
+  nav .menu {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    background: var(--header-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 2rem;
+    display: none;
+    box-shadow: var(--shadow-lg);
+    z-index: 999;
+  }
+
+  nav .menu.show {
+    display: block;
+  }
+
+  nav .menu ul {
+    flex-direction: column;
+    gap: 1.25rem;
+    align-items: flex-start;
+  }
+
+  .hero-text h1 {
+    font-size: 2.25rem;
+  }
+
+  .section-header .title,
+  .section-header h2 {
+    font-size: 1.875rem;
+  }
+
+  .quiz-card,
+  .profile-card {
+    padding: 1.25rem;
+  }
+
+  .quiz-result-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-actions-toolbar {
+    width: 100%;
+  }
+
+  .profile-actions-toolbar .action-btn {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .meme-preset-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .style-row-grid,
+  .meme-filters-row,
+  .meme-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .clips-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nav-actions {
+    gap: 0.4rem;
+  }
+
+  .achievements-badge-btn {
+    padding: 0.35rem 0.65rem;
+    font-size: 0.78rem;
+  }
+}
+
+@media (forced-colors: active) {
+  :focus-visible {
+    outline: 3px solid Highlight;
+    outline-offset: 3px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

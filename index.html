@@ -54,9 +54,9 @@
     <meta name="twitter:image:alt" content="Cartão promocional do Alanverso com memes e reações épicas do Alanzoka" />
 
     <!-- Favicon Vetorial SVG & Fallback + PWA Manifest -->
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <link rel="alternate icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+    <link rel="alternate icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/icons/favicon.svg" />
     <link rel="manifest" href="manifest.json" />
 
     <!-- Dados Estruturados Schema.org (JSON-LD) -->
@@ -96,8 +96,15 @@
       rel="stylesheet"
     />
 
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css" />
+    <!-- Modular Stylesheets (v5.0.0) -->
+    <link rel="stylesheet" href="styles/tokens.css" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/components.css" />
+    <link rel="stylesheet" href="styles/sections/hero-showcase.css" />
+    <link rel="stylesheet" href="styles/sections/soundboard-clips.css" />
+    <link rel="stylesheet" href="styles/sections/interactive-labs.css" />
+    <link rel="stylesheet" href="styles/sections/lore-footer.css" />
+    <link rel="stylesheet" href="styles/responsive.css" />
   </head>
   <body>
     <!-- Skip-links para Acessibilidade via Teclado (WCAG 2.2 AAA) -->
@@ -155,7 +162,7 @@
               title="Conquistas do Alanverso"
             >
               <span aria-hidden="true">🏆</span>
-              <span id="achievements-counter-badge">0/10</span>
+              <span id="achievements-counter-badge">0/12</span>
             </a>
 
             <button
@@ -195,7 +202,7 @@
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                style="display: none"
+                class="u-hidden"
               >
                 <circle cx="12" cy="12" r="5"></circle>
                 <line x1="12" y1="1" x2="12" y2="3"></line>
@@ -573,6 +580,19 @@
                 </button>
               </div>
             </div>
+
+            <!-- Efeitos DSP Web Audio API v5.0.0 -->
+            <div class="soundboard-effects-bar" role="group" aria-label="Efeitos de áudio em tempo real">
+              <button type="button" id="btn-fx-echo" class="fx-toggle-btn" aria-pressed="false">
+                🎛️ Eco / Reverb
+              </button>
+              <button type="button" id="btn-fx-bass" class="fx-toggle-btn" aria-pressed="false">
+                🔊 Bass Boost
+              </button>
+              <button type="button" id="btn-fx-turbo" class="fx-toggle-btn">
+                🔥 Modo Metralhadora Turbo
+              </button>
+            </div>
           </div>
 
           <!-- Grade de Botões de Sons do Soundboard -->
@@ -718,7 +738,7 @@
               data-sound="speech-pedra"
               aria-label="Tocar bordão falado: Olha a Pedraaa!"
             >
-              <span class="sound-key-badge">P</span>
+              <span class="sound-key-badge">Q</span>
               <span class="sound-icon">🗣️</span>
               <span class="sound-info">
                 <strong>Fala: 'Olha a Pedra!'</strong>
@@ -733,7 +753,7 @@
               data-sound="speech-tijolo"
               aria-label="Tocar bordão falado: É o Tijolinho, moleque!"
             >
-              <span class="sound-key-badge">T</span>
+              <span class="sound-key-badge">W</span>
               <span class="sound-icon">🗣️</span>
               <span class="sound-info">
                 <strong>Fala: 'É o Tijolinho!'</strong>
@@ -748,7 +768,7 @@
               data-sound="speech-respira"
               aria-label="Tocar bordão falado: Calma, respira Alanzoka!"
             >
-              <span class="sound-key-badge">R</span>
+              <span class="sound-key-badge">E</span>
               <span class="sound-icon">🗣️</span>
               <span class="sound-info">
                 <strong>Fala: 'Calma, Respira!'</strong>
@@ -793,9 +813,8 @@
               <button
                 type="button"
                 id="clips-search-clear"
-                class="search-clear-btn"
+                class="search-clear-btn u-hidden"
                 aria-label="Limpar busca de clipes"
-                style="display: none;"
               >
                 ✕
               </button>
@@ -817,6 +836,7 @@
             <button type="button" class="clip-filter-btn" data-filter="terror">Sustos & Terror</button>
             <button type="button" class="clip-filter-btn" data-filter="comedia">Risadas & Memes</button>
             <button type="button" class="clip-filter-btn" data-filter="jogatinas">Jogatinas Épicas</button>
+            <button type="button" class="clip-filter-btn" data-filter="favorites">⭐ Favoritos</button>
           </div>
 
           <p id="clips-results-count" class="clips-results-count" aria-live="polite">
@@ -1103,7 +1123,7 @@
           </div>
 
           <!-- Estado Vazio de Busca/Filtro -->
-          <div id="clips-empty-state" class="clips-empty-state" style="display: none;" aria-live="polite">
+          <div id="clips-empty-state" class="clips-empty-state u-hidden" aria-live="polite">
             <p>Nenhum clipe encontrado para essa busca ou filtro no Alanverso.</p>
             <button type="button" id="clips-reset-filter" class="button button-secondary">
               🔄 Limpar Busca e Filtros
@@ -1125,14 +1145,14 @@
               Gerador de Memes do <span>Alanzoka</span>
             </h2>
             <p class="subtitle" data-i18n="generator.subtitle">
-              Crie memes lendários com renderização direta no Canvas HTML5, personalize legendas, escolha as caretas mais icônicas e baixe o PNG em alta resolução!
+              Crie memes lendários com renderização no Canvas HTML5, filtros visuais, carimbos exclusivos e download em PNG de alta resolução!
             </p>
           </header>
 
           <div class="meme-generator-layout">
             <!-- Painel de Controles -->
             <div class="meme-controls-card">
-              <h3 style="margin-bottom: 1rem; color: var(--title-color);">🎨 Personalize seu Meme</h3>
+              <h3 class="u-heading-inline">🎨 Personalize seu Meme</h3>
 
               <!-- Textos -->
               <div class="form-group">
@@ -1273,6 +1293,29 @@
                     </label>
                   </div>
                 </div>
+
+                <div class="meme-filters-row">
+                  <div>
+                    <label for="meme-filter-select">Filtro Visual:</label>
+                    <select id="meme-filter-select" aria-label="Selecionar filtro visual da imagem">
+                      <option value="none">Normal</option>
+                      <option value="bw">Clássico P&amp;B</option>
+                      <option value="gamer">Gamer Neon</option>
+                      <option value="sepia">Sépia Nostálgico</option>
+                      <option value="inverted">Invertido</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="meme-sticker-select">Carimbo Alanverso:</label>
+                    <select id="meme-sticker-select" aria-label="Adicionar selo ou carimbo no canto">
+                      <option value="none">Sem carimbo</option>
+                      <option value="aovivo">🔴 AO VIVO</option>
+                      <option value="pistola">🔥 100% PISTOLA</option>
+                      <option value="cremosa">👀 CREMOSA</option>
+                      <option value="metralhadora">😂 METRALHADORA</option>
+                    </select>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -1363,10 +1406,15 @@
               <div class="quiz-header">
                 <div class="quiz-header-meta">
                   <span class="quiz-badge" id="quiz-category-badge">🧠 Alanologia Geral</span>
-                  <span class="quiz-counter" id="quiz-counter" aria-live="polite">Pergunta 1 de 6</span>
+                  <span class="quiz-counter" id="quiz-counter" aria-live="polite">Pergunta 1 de 10</span>
                 </div>
-                <div class="quiz-score-pill" id="quiz-score-pill" aria-label="Pontuação atual">
-                  <span aria-hidden="true">🏆</span> Pontos: <strong id="quiz-current-score">0</strong>
+                <div class="quiz-header-stats">
+                  <div class="quiz-streak-pill" id="quiz-streak-pill" aria-label="Sequência de acertos">
+                    🔥 Combo: <strong id="quiz-current-streak">0x</strong>
+                  </div>
+                  <div class="quiz-score-pill" id="quiz-score-pill" aria-label="Pontuação atual">
+                    <span aria-hidden="true">🏆</span> Pontos: <strong id="quiz-current-score">0</strong>
+                  </div>
                 </div>
               </div>
 
@@ -1377,10 +1425,10 @@
                 aria-label="Progresso do quiz"
                 aria-valuenow="1"
                 aria-valuemin="1"
-                aria-valuemax="6"
+                aria-valuemax="10"
                 id="quiz-progress-bar"
               >
-                <div class="quiz-progress-fill" id="quiz-progress-fill" style="width: 16.66%;"></div>
+                <div class="quiz-progress-fill u-progress-quiz-init" id="quiz-progress-fill"></div>
               </div>
 
               <!-- Pergunta e Opções -->
@@ -1390,15 +1438,18 @@
                 </h3>
 
                 <div class="quiz-options-grid" id="quiz-options-grid" role="group" aria-label="Opções de resposta">
-                  <!-- Injetado dinamicamente via JS com botões type="button" -->
+                  <!-- Injetado dinamicamente via DOM seguro -->
                 </div>
 
                 <!-- Feedback Acessível Imediato -->
-                <div id="quiz-feedback-box" class="quiz-feedback-box" aria-live="assertive" style="display: none;"></div>
+                <div id="quiz-feedback-box" class="quiz-feedback-box u-hidden" aria-live="assertive"></div>
               </div>
 
               <div class="quiz-footer">
-                <button type="button" id="quiz-next-btn" class="button" style="display: none;">
+                <button type="button" id="quiz-hint-btn" class="button button-outline button-compact">
+                  💡 Dica 50/50 (2)
+                </button>
+                <button type="button" id="quiz-next-btn" class="button u-hidden">
                   Próxima Pergunta ➔
                 </button>
               </div>
@@ -1406,9 +1457,8 @@
 
             <!-- Card de Resultado Final (Exibido ao Concluir) -->
             <div
-              class="quiz-result-card"
+              class="quiz-result-card u-hidden"
               id="quiz-result-card"
-              style="display: none;"
               role="region"
               aria-label="Resultado final do quiz"
             >
@@ -1511,11 +1561,31 @@
               </div>
             </div>
 
+            <!-- Estatísticas do Multiverso v5.0.0 -->
+            <div class="profile-stats-strip" id="profile-stats-strip" aria-label="Estatísticas do usuário">
+              <div class="profile-mini-stat">
+                <strong id="stat-sounds-played">0</strong>
+                <span>Sons disparados</span>
+              </div>
+              <div class="profile-mini-stat">
+                <strong id="stat-clips-watched">0</strong>
+                <span>Clipes assistidos</span>
+              </div>
+              <div class="profile-mini-stat">
+                <strong id="stat-memes-created">0</strong>
+                <span>Memes baixados</span>
+              </div>
+              <div class="profile-mini-stat">
+                <strong id="stat-quiz-highscore">0</strong>
+                <span>Recorde no Quiz</span>
+              </div>
+            </div>
+
             <!-- Barra de Progresso Global de Conquistas -->
             <div class="profile-progress-block">
               <div class="profile-progress-labels">
                 <span id="achievements-progress-text">Progresso Geral das Conquistas</span>
-                <span id="achievements-percentage-text" class="progress-percent-val">0% (0 de 10)</span>
+                <span id="achievements-percentage-text" class="progress-percent-val">0% (0 de 12)</span>
               </div>
               <div
                 class="profile-progress-track"
@@ -1523,10 +1593,10 @@
                 aria-label="Progresso geral de troféus desbloqueados"
                 aria-valuenow="0"
                 aria-valuemin="0"
-                aria-valuemax="10"
+                aria-valuemax="12"
                 id="achievements-progress-bar"
               >
-                <div class="profile-progress-fill" id="achievements-progress-fill" style="width: 0%;"></div>
+                <div class="profile-progress-fill u-progress-init" id="achievements-progress-fill"></div>
               </div>
             </div>
           </div>
@@ -1862,7 +1932,7 @@
         <div class="footer-grid">
           <div>
             <a class="logo" href="#home">Alan<span>verso</span></a>
-            <p style="margin-top: 1rem; max-width: 24rem;">
+            <p class="footer-desc">
               Um tributo carinhoso da comunidade para o Alanzoka e todos os clipes que trazem
               sorrisos diários para milhões de pessoas.
             </p>
@@ -1892,7 +1962,7 @@
         </div>
 
         <div class="footer-bottom">
-          <p>© 2026 Alanverso Showcase. Desenvolvido com carinho para os fãs do Alanzoka.</p>
+          <p>© 2026 Alanverso Showcase v5.0.0. Desenvolvido com carinho para os fãs do Alanzoka.</p>
         </div>
       </div>
     </footer>
@@ -1939,16 +2009,11 @@
         </div>
 
         <div class="modal-body">
-          <img
-            id="modal-preview-img"
-            src=""
-            alt=""
-            style="display: none"
-          />
-          <p id="modal-meme-desc" class="subtitle" style="margin-bottom: 1.5rem;"></p>
+          <img id="modal-preview-img" src="" alt="" class="u-hidden" />
+          <p id="modal-meme-desc" class="subtitle u-mb-15"></p>
 
           <form id="fan-submission-form">
-            <h4 style="margin-bottom: 1rem; color: var(--title-color);">
+            <h4 class="u-heading-inline">
               Envie sua Sugestão de Meme ou Clipe
             </h4>
             <div class="form-group">
@@ -1978,7 +2043,7 @@
                 required
               ></textarea>
             </div>
-            <button type="submit" class="button" style="width: 100%;">
+            <button type="submit" class="button u-full-width">
               Enviar para o Alanverso 🚀
             </button>
           </form>
@@ -2082,8 +2147,8 @@
           <div class="video-details-footer">
             <span id="video-modal-views" class="video-meta-views">👁 1.2M views</span>
             <div class="video-social-share">
-              <button type="button" id="btn-share-clip" class="button button-outline" style="padding: 0.5rem 1rem;">
-                🔗 Copiar Link do Clipe
+              <button type="button" id="btn-share-clip" class="button button-outline button-compact">
+                🔗 Compartilhar / Copiar Link
               </button>
             </div>
           </div>
@@ -2115,7 +2180,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <p class="subtitle" style="margin-bottom: 1.25rem;">
+          <p class="subtitle u-mb-15">
             Navegue pelo Alanverso com máxima velocidade e total acessibilidade.
           </p>
           <ul class="shortcuts-list">
@@ -2124,6 +2189,8 @@
             <li><kbd>T</kbd> <span>Alternar tema Escuro / Claro</span></li>
             <li><kbd>C</kbd> <span>Alternar modo de Alto Contraste (AAA)</span></li>
             <li><kbd>L</kbd> <span>Alternar idioma (Português / English)</span></li>
+            <li><kbd>1</kbd>–<kbd>9</kbd> <span>Tocar efeitos do Soundboard</span></li>
+            <li><kbd>Q</kbd> / <kbd>W</kbd> / <kbd>E</kbd> <span>Disparar falas sintetizadas do Alan</span></li>
             <li><kbd>Esc</kbd> <span>Fechar qualquer modal aberto</span></li>
           </ul>
         </div>
@@ -2134,9 +2201,7 @@
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <!-- ScrollReveal JS -->
     <script src="https://unpkg.com/scrollreveal"></script>
-    <!-- Módulo i18n Bilíngue -->
-    <script src="i18n.js"></script>
-    <!-- Main JS -->
-    <script src="main.js"></script>
+    <!-- Entrypoint ES Module v5.0.0 -->
+    <script type="module" src="src/main.js"></script>
   </body>
 </html>

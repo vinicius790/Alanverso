@@ -1,0 +1,11 @@
+.git
+.github
+node_modules
+deploy
+docs
+tests
+scripts
+*.md
+*.ps1
+*.sh
+package*.json

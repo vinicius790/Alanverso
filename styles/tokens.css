@@ -1,0 +1,81 @@
+/* ==========================================================================
+   ALANVERSO v5.0.0 - TOKENS DE DESIGN, TEMAS E ALTO CONTRASTE (WCAG 2.2 AAA)
+   ========================================================================== */
+
+:root {
+  --header-height: 4.5rem;
+
+  /* Paleta HSL - Roxo Twitch & Destaques Neon */
+  --hue: 265;
+  --base-color: hsl(var(--hue), 85%, 60%);
+  --base-color-hover: hsl(var(--hue), 90%, 50%);
+  --base-color-subtle: hsl(var(--hue), 85%, 95%);
+  --base-color-second: hsl(var(--hue), 70%, 90%);
+  --base-color-alt: hsl(var(--hue), 85%, 52%);
+
+  /* Tema Claro (Padrão) */
+  --body-bg: #f8fafc;
+  --card-bg: #ffffff;
+  --header-bg: rgba(255, 255, 255, 0.92);
+  --header-border: #e2e8f0;
+  --title-color: #0f172a;
+  --text-color: #475569;
+  --text-muted: #64748b;
+  --text-light: #ffffff;
+  --border-color: #e2e8f0;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 14px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 12px 30px rgba(15, 23, 42, 0.12);
+
+  /* Tipografia e Forma */
+  --font-title: 'Poppins', system-ui, -apple-system, sans-serif;
+  --font-body: 'DM Sans', system-ui, -apple-system, sans-serif;
+  --font-primary: var(--font-title);
+  --title-font-size: 1.875rem;
+  --subtitle-font-size: 1.05rem;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Tema Escuro */
+[data-theme='dark'] {
+  --body-bg: #0b0f19;
+  --card-bg: #131c2e;
+  --header-bg: rgba(11, 15, 25, 0.92);
+  --header-border: #1e293b;
+  --title-color: #f8fafc;
+  --text-color: #cbd5e1;
+  --text-muted: #94a3b8;
+  --base-color: #9333ea;
+  --base-color-hover: #a855f7;
+  --base-color-subtle: rgba(147, 51, 234, 0.15);
+  --base-color-second: rgba(147, 51, 234, 0.25);
+  --border-color: #1e293b;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 12px 36px rgba(0, 0, 0, 0.6);
+}
+
+/* Modo de Alto Contraste (WCAG 2.2 AAA - Razão >= 7:1) */
+[data-contrast='high'] {
+  --body-bg: #000000;
+  --card-bg: #000000;
+  --header-bg: #000000;
+  --header-border: #ffffff;
+  --title-color: #ffffff;
+  --text-color: #ffffff;
+  --text-muted: #ffffaa;
+  --text-light: #ffffff;
+  --base-color: #ffff00;
+  --base-color-hover: #ffff66;
+  --base-color-subtle: #1c1c00;
+  --base-color-second: #ffff00;
+  --base-color-alt: #00ffff;
+  --border-color: #ffffff;
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: none;
+}

@@ -1,4 +1,4 @@
-# 🌌 Alanverso — O Multiverso Definitivo do Alanzoka
+# 🌌 Alanverso v5.0.0 — O Multiverso Definitivo do Alanzoka
 
 <p align="center">
   <img src="https://c.tenor.com/AXPrsBtnIXAAAAAd/alanzoka-metralhadora.gif" alt="Alanzoka Metralhadora Preview" width="480" style="border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.3);" />
@@ -6,177 +6,87 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Build-Passing-brightgreen?style=for-the-badge&logo=githubactions&logoColor=white" alt="Build Status" />
-  <img src="https://img.shields.io/badge/Versão-3.0.0-blue?style=for-the-badge" alt="Versão" />
+  <img src="https://img.shields.io/badge/Versão-5.0.0-purple?style=for-the-badge" alt="Versão 5.0.0" />
   <img src="https://img.shields.io/badge/Acessibilidade-WCAG%202.2%20AAA-success?style=for-the-badge&logo=w3c" alt="WCAG 2.2 AAA" />
-  <img src="https://img.shields.io/badge/PWA-Installable%20%26%20Offline-9333ea?style=for-the-badge&logo=pwa" alt="PWA" />
-  <img src="https://img.shields.io/badge/Tests-17%2F17%20Passing-brightgreen?style=for-the-badge&logo=node.js" alt="Testes" />
-  <img src="https://img.shields.io/badge/Stack-HTML5%20%7C%20CSS3%20%7C%20ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="Stack" />
-  <img src="https://img.shields.io/badge/Licença-MIT-yellow?style=for-the-badge" alt="Licença" />
+  <img src="https://img.shields.io/badge/Segurança-Zero%20XSS-blue?style=for-the-badge&logo=owasp" alt="Zero XSS" />
+  <img src="https://img.shields.io/badge/PWA-Offline--First-9333ea?style=for-the-badge&logo=pwa" alt="PWA" />
+  <img src="https://img.shields.io/badge/Tests-30%2F30%20Passing-brightgreen?style=for-the-badge&logo=node.js" alt="Testes" />
+  <img src="https://img.shields.io/badge/Stack-ES%20Modules%20%7C%20Zero--Build-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="Stack" />
 </p>
 
 ---
 
 ## 📖 Visão Geral
 
-O **Alanverso** é uma plataforma web interativa, responsiva e bem-humorada criada em homenagem ao streamer brasileiro **Alanzoka (Alan Ferreira)**. O projeto reúne os momentos históricos das lives, a lendária risada em ritmo de metralhadora, o Soundboard sintetizado com Web Audio API, central de vídeos, gerador de memes em Canvas HTML5, quiz oficial da lore, galeria de conquistas com persistência, PWA offline e suporte bilíngue (Português e Inglês).
-
-A aplicação segue padrões de engenharia de software de altíssimo nível, arquitetura modular e conformidade máxima com as diretrizes de acessibilidade **WCAG 2.2 AAA**.
+O **Alanverso v5.0.0** é um portal web interativo, acessível e modular criado em homenagem ao streamer brasileiro **Alanzoka (Alan Ferreira)**. O projeto reúne arquitetura moderna em **ES Modules nativos (Zero-Build, Zero Dependências)**, **Zero sinks de HTML inseguros** (`createElement` / `textContent`), Soundboard sintetizado com efeitos DSP Web Audio API, Central de Clipes com busca precisa e favoritos, Gerador de Memes HTML5 Canvas com filtros e carimbos, Quiz Oficial da Lore com Dicas 50/50, Sistema de Conquistas com estatísticas e backup JSON v5.0, PWA Offline-First e acessibilidade **WCAG 2.2 AAA**.
 
 ---
 
-## 🚀 Novos Recursos & Destaques da Versão 3.0.0
+## 🚀 Principais Recursos & Destaques (v5.0.0)
 
 | Recurso | Descrição |
 | :--- | :--- |
-| 🏆 **Sistema de Conquistas (Gamificação)** | 10 medalhas desbloqueáveis sincronizadas no `localStorage` sob `'alanverso-achievements'` com status dinâmico (de Iniciante a Lenda Suprema). |
-| 🧠 **Quiz Interativo Oficial** | Desafio com 6 perguntas dinâmicas sobre variantes e lore, gabarito instantâneo, cálculo percentual e persistência do recorde (High Score). |
-| 🔍 **Busca de Clipes com Debounce** | Filtragem instantânea por texto com debounce (250ms), ordenação por visualizações, duração ou ordem alfabética e feedback via ARIA Live. |
-| 💾 **Exportação & Importação JSON** | Download e upload do perfil com conquistas e pontuações em formato JSON padronizado para backup e portabilidade. |
-| 📲 **Progressive Web App (PWA)** | Manifesto (`manifest.json`) instalável e Service Worker (`sw.js`) com estratégia Stale-While-Revalidate para funcionamento offline. |
-| 👁️ **Acessibilidade WCAG 2.2 AAA** | Modo de Alto Contraste (`data-contrast="high"`), guia de atalhos de teclado (`#shortcuts-modal`, tecla `?`), anéis de foco de 3px e skip links para todas as seções. |
-| 🎹 **Soundboard Web Audio API** | Síntese de áudio em tempo real com osciladores e visualizador de espectro/ondas em Canvas. |
-| 🎨 **Gerador de Memes HTML5 Canvas** | Customização completa de legendas, cores, fontes, upload de imagens e download em PNG de alta resolução. |
-| 🌐 **Internacionalização Dinâmica (i18n)** | Suporte completo bilíngue (Português pt-BR e Inglês en) com sanitização de tags contra XSS. |
-
----
-
-## 🏛️ Arquitetura do Sistema
-
-```mermaid
-flowchart TD
-    subgraph ViewLayer["Camada de Apresentação (View / DOM / A11y)"]
-        Hero["Hero Multiversal & Tema"]
-        SoundboardUI["Soundboard (Canvas FFT)"]
-        ClipsUI["Central de Clipes (Debounce Search)"]
-        QuizUI["Quiz Oficial Interativo"]
-        AchievementsUI["Galeria de Conquistas & Perfil"]
-        ShortcutsUI["Modal de Atalhos (?)"]
-    end
-
-    subgraph CoreEngine["Camada de Controladores (JavaScript ES6+)"]
-        A11y["A11y Engine (WCAG 2.2 AAA)"]
-        I18n["Módulo i18n Bilíngue (pt-BR / en)"]
-        Gamification["Gamification Engine & Auto-Unlock"]
-        Audio["Web Audio API Synthesizer"]
-        Debounce["Debounced Search Controller"]
-        DataSync["JSON Profile Sync"]
-    end
-
-    subgraph StorageLayer["Armazenamento & PWA"]
-        SW["Service Worker (sw.js)"]
-        Cache["Cache Storage (Offline Assets)"]
-        LS["localStorage (Achievements & Quiz Score)"]
-    end
-
-    ViewLayer <--> CoreEngine
-    CoreEngine --> StorageLayer
-```
+| 🧩 **Arquitetura Modular ES Modules** | Núcleo separado em `src/core/`, `src/data/` e `src/features/` com folhas CSS em `styles/` + `styles/sections/`, assets em `assets/` e infra em `deploy/`. |
+| 🛡️ **Segurança Estrita (Zero XSS)** | 100% da interface dinâmica renderizada via fábrica segura `h()` e parser seguro de fragmentos, auditada automaticamente pelo CI. |
+| 🎛️ **Soundboard Web Audio DSP** | 12 efeitos e falas sintetizados com visualizador FFT Canvas, **Eco/Delay**, **Bass Boost** e **Modo Metralhadora Turbo**. |
+| ⭐ **Central de Clipes & Favoritos** | Busca debounced (250ms), ordenação exata (`1.4M > 890K`, duração real `mm:ss`), carimbos de favorito (`⭐`), Web Share API e player Canvas. |
+| 🎨 **Gerador de Memes Canvas v5.0** | Edição ao vivo com **Filtros Visuais** (P&B, Gamer Neon, Sépia, Invertido), **Carimbos Exclusivos** ("AO VIVO", "100% PISTOLA") e export PNG. |
+| 🧠 **Quiz Oficial (10 Questões)** | Perguntas da lore do canal, **Dica 50/50** (até 2 por partida), contador de **Combo/Streak**, recordes salvos e feedback ARIA. |
+| 🏆 **12 Conquistas & Estatísticas** | Painel em tempo real com contador de sons, clipes, memes, recordes, 6 patentes progressivas e backup JSON universal (v3/v5). |
+| 📲 **PWA Offline-First & Docker** | Service Worker v5.0.0 cobrindo todos os módulos ES e CSS, manifesto instalável e deploy pronto com `Dockerfile` + `nginx.conf`. |
+| 🌐 **i18n Bilíngue & WCAG AAA** | Troca instantânea `pt-BR`/`en`, Modo Alto Contraste (`data-contrast="high"`), Live Region ARIA e atalhos globais livres de conflito. |
 
 ---
 
 ## ⌨️ Atalhos de Teclado Globais (WCAG AAA)
 
-Navegue com velocidade total pelo Alanverso utilizando os seguintes atalhos:
-
-- <kbd>?</kbd> : Abrir ou fechar o guia de atalhos de teclado.
-- <kbd>/</kbd> : Focar imediatamente no campo de busca de clipes com debounce.
-- <kbd>T</kbd> : Alternar entre Tema Escuro e Claro com persistência.
-- <kbd>C</kbd> : Alternar modo de Alto Contraste (WCAG AAA).
-- <kbd>L</kbd> : Alternar idioma da interface (Português / English).
-- <kbd>Esc</kbd> : Fechar qualquer modal ativo (Player de clipe, Atalhos ou Envio).
-- <kbd>1</kbd> a <kbd>9</kbd> : Tocar efeitos sonoros sintetizados no Soundboard.
+| Tecla | Ação |
+| :---: | :--- |
+| <kbd>?</kbd> | Abrir / fechar o guia de atalhos de teclado |
+| <kbd>/</kbd> | Focar imediatamente no campo de busca de clipes |
+| <kbd>T</kbd> | Alternar Tema Escuro / Claro |
+| <kbd>C</kbd> | Alternar modo de Alto Contraste (WCAG AAA) |
+| <kbd>L</kbd> | Alternar idioma (`pt-BR` / `en`) |
+| <kbd>1</kbd>–<kbd>9</kbd> | Tocar efeitos sonoros sintetizados no Soundboard |
+| <kbd>Q</kbd> / <kbd>W</kbd> / <kbd>E</kbd> | Disparar falas sintetizadas clássicas no Soundboard |
+| <kbd>Esc</kbd> | Fechar qualquer modal ativo |
 
 ---
 
-## 🧪 Testes Automatizados (Node.js Nativo)
+## ⚡ Quick Start (Início Rápido)
 
-A suíte de testes cobre 100% dos requisitos funcionais, integridade estrutural do DOM, responsividade CSS, PWA, Quiz e Gamificação utilizando o test runner nativo do Node.js:
+Requer **Node.js 22+** (zero instalação de `node_modules` necessária):
 
 ```bash
-# Executar a suíte de testes completa
-node --test tests/dom.test.js tests/responsive.test.js tests/features.test.js
+# 1. Iniciar servidor de desenvolvimento seguro (http://localhost:8080)
+npm start
 
-# Ou via npm scripts
+# Ou com um clique no Windows / Linux / macOS:
+./iniciar.ps1        # PowerShell (Windows)
+./iniciar.sh         # Shell (Linux/macOS)
+
+# Ou via Docker + Nginx Alpine:
+docker compose -f deploy/docker-compose.yml up --build
+```
+
+---
+
+## 🧪 Verificação, Sintaxe & Testes Automatizados
+
+Toda a suíte executa em menos de **0.5 segundo** usando exclusivamente o test runner nativo do Node.js (`node:test`):
+
+```bash
+# Verificação completa: sintaxe JS/CSS, orçamento modular e todos os 30 testes
+npm run check
+
+# Executar apenas os testes unitários e de segurança
 npm test
 ```
 
-### Resultados dos Testes:
-```text
-✔ Estrutura básica e metadados essenciais do HTML
-✔ Unicidade de IDs no documento
-✔ Presença de elementos e IDs vitais para o main.js
-✔ Integridade das âncoras internas e links de navegação
-✔ Verificação de referências de arquivos locais (CSS/JS)
-✔ Boas práticas de Acessibilidade (a11y)
-✔ Hierarquia e semântica de cabeçalhos (headings)
-✔ PWA: Validação do Web App Manifest (manifest.json)
-✔ PWA: Validação do Service Worker (sw.js)
-✔ Sistema de Conquistas: Integridade estrutural e dados
-✔ Quiz Interativo: Validação do banco de perguntas e mecânica
-✔ Busca com Debounce: Utilitário e implementação na Central de Clipes
-✔ Exportação e Importação JSON de Perfil
-✔ Acessibilidade WCAG AAA: Alto Contraste, Focus e Atalhos
-✔ Internacionalização (i18n): Paridade de chaves entre pt-BR e en
-✔ Validação de Metatag Viewport em HTML
-✔ Validação de Media Queries e Responsividade CSS
-ℹ tests 17 | pass 17 | fail 0
-```
+Consulte [`docs/ESTRUTURA.md`](docs/ESTRUTURA.md) para o mapa completo de arquivos e [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) para os diagramas Mermaid da arquitetura.
 
 ---
 
-## ⚡ Quick Start (Execução Local)
+## 📄 Licença
 
-1. **Clonar o Repositório:**
-   ```bash
-   git clone https://github.com/seu-usuario/Alanverso.git && cd Alanverso
-   ```
-
-2. **Executar Servidor Local:**
-   ```bash
-   # Opção 1: Via Python
-   python -m http.server 8080
-
-   # Opção 2: Via Node.js
-   npx serve .
-   ```
-
-3. **Acessar no Navegador:**
-   Abra `http://localhost:8080` no navegador de sua preferência.
-
----
-
-## 📂 Estrutura de Arquivos
-
-```
-Alanverso/
-├── .github/
-│   └── workflows/
-│       └── ci.yml                 # CI/CD com linter e testes automatizados
-├── tests/
-│   ├── dom.test.js                # Testes de integridade DOM
-│   ├── responsive.test.js         # Testes de media queries e viewport
-│   ├── features.test.js           # Testes de PWA, Quiz, Conquistas e Debounce
-│   ├── test_dom.js                # Lógica estrutural do DOM
-│   └── test_responsive.js         # Lógica de responsividade
-├── favicon.svg                    # Ícone vetorial da aplicação
-├── index.html                     # Estrutura semântica principal da SPA
-├── i18n.js                        # Motor de internacionalização bilíngue
-├── main.js                        # Controladores, Quiz, Conquistas e Debounce
-├── manifest.json                  # PWA Web App Manifest
-├── style.css                      # Estilos, temas, animações e alto contraste AAA
-├── sw.js                          # Service Worker para suporte offline
-├── package.json                   # Metadados e scripts de teste
-├── ARCHITECTURE.md                # Arquitetura detalhada com diagramas Mermaid
-├── CHANGELOG.md                   # Histórico semântico de versões (Keep a Changelog)
-├── CONTRIBUTING.md                # Guia de contribuição da comunidade
-├── SECURITY.md                    # Diretrizes de segurança
-├── LICENSE                        # Licença MIT
-└── README.md                      # Documentação oficial
-```
-
----
-
-## 👥 Créditos & Licença
-
-- Desenvolvido como um tributo carinhoso da comunidade ao criador de conteúdo **[Alanzoka (Alan Ferreira)](https://www.twitch.tv/alanzoka)**.
-- Distribuído sob a licença **MIT**. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
+Desenvolvido como tributo da comunidade ao criador de conteúdo **[Alanzoka (Alan Ferreira)](https://www.twitch.tv/alanzoka)** sob a licença **[MIT](LICENSE)**.

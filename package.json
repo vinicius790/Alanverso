@@ -1,12 +1,19 @@
 {
   "name": "alanverso",
-  "version": "3.0.0",
-  "description": "O Multiverso Definitivo do Alanzoka - Portal interativo com memes, soundboard Web Audio, central de clipes, quiz oficial, sistema de conquistas, PWA e acessibilidade WCAG 2.2 AAA.",
-  "main": "main.js",
+  "version": "5.0.0",
+  "description": "O Multiverso Definitivo do Alanzoka — Portal interativo modular em ES Modules com soundboard Web Audio DSP, central de clipes, gerador de memes HTML5 Canvas, quiz oficial com dicas 50/50, conquistas gamificadas, PWA offline e WCAG 2.2 AAA.",
+  "type": "module",
+  "main": "src/main.js",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
-    "test": "node --test tests/dom.test.js tests/responsive.test.js tests/features.test.js",
-    "test:legacy": "node --test tests/test_dom.js tests/test_responsive.js tests/features.test.js",
-    "lint": "node --check main.js && node --check i18n.js && node --check sw.js && node --check tests/features.test.js"
+    "start": "node scripts/serve.mjs",
+    "test": "node --test \"tests/**/*.test.js\"",
+    "test:coverage": "node --test --experimental-test-coverage \"tests/**/*.test.js\"",
+    "check:syntax": "node scripts/check_syntax.mjs",
+    "check:bundle": "node scripts/bundle_check.js",
+    "check": "npm run check:syntax && npm run check:bundle && npm test"
   },
   "keywords": [
     "alanzoka",
@@ -17,7 +24,9 @@
     "quiz",
     "achievements",
     "pwa",
-    "wcag-aaa"
+    "wcag-aaa",
+    "es-modules",
+    "zero-dependencies"
   ],
   "author": "Alanverso Showcase",
   "license": "MIT"

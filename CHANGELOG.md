@@ -5,6 +5,28 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [5.0.0] - 2026-11-18 - Arquitetura Modular ES Modules, DSP Audio & Zero-XSS
+
+### Added
+- **Refatoração Arquitetural Completa (ES Modules)**: Separação do antigo arquivo monolítico `main.js` (2.376 linhas) em 18 módulos coesos organizados sob `src/core/`, `src/data/` e `src/features/`, com entrypoint único `src/main.js`.
+- **Camadas CSS Modulares (`styles/`)**: Separação de estilos em `tokens.css`, `base.css`, `components.css`, `sections.css` e `responsive.css`, eliminando estilos inline do `index.html`.
+- **Cadeia DSP no Soundboard (`src/features/soundboard.js`)**: Adicionados efeitos Web Audio API reais — **Eco / Reverb** (`DelayNode` com realimentação), **Bass Boost** (`BiquadFilterNode` lowshelf +12dB) e **Modo Metralhadora Turbo** — com nova conquista `audio_alchemist`.
+- **Favoritos & Busca Precisa de Clipes (`src/features/clips.js`)**: Botão `⭐ Favoritar` em cada clipe com persistência em `localStorage`, filtro dedicado `⭐ Favoritos`, compartilhamento via Web Share API e conquista `clip_collector`.
+- **Gerador de Memes v5.0.0 (`src/features/meme-generator.js`)**: Novos filtros visuais aplicados diretamente no Canvas (P&B Clássico, Gamer Neon, Sépia, Invertido) e carimbos exclusivos do Alanverso (`🔴 AO VIVO`, `🔥 100% PISTOLA`, `👀 CREMOSA`, `😂 METRALHADORA`).
+- **Quiz Oficial Expandido (`src/features/quiz.js` & `src/data/quiz.js`)**: Banco ampliado de 6 para **10 perguntas**, sistema de **Dica 50/50** (elimina 2 opções incorretas, até 2 usos por rodada) e **Combo/Streak** de acertos consecutivos com persistência do maior combo.
+- **Dashboard de Estatísticas & Patentes (`src/features/achievements.js`)**: Painel de métricas ao vivo (sons disparados, clipes assistidos, memes baixados, recorde no Quiz), **12 conquistas totais** e nova patente máxima *"Entidade Cósmica do Alanverso"*.
+- **Backup JSON v5.0.0 & Schema Estrito (`src/core/backup.js`)**: Exportação/restauração incluindo favoritos de clipes, estatísticas e melhor streak, com validação rígida e retrocompatibilidade garantida para backups v3.0.0.
+- **Infraestrutura DevOps & Executores Locais**: Adicionados `scripts/serve.mjs`, `scripts/check_syntax.mjs`, `scripts/bundle_check.js`, `Dockerfile`, `docker-compose.yml`, `nginx.conf`, `iniciar.ps1`, `iniciar.sh` e comando unificado `npm run check`.
+- **Suíte de Testes Nativos Expandida (`tests/`)**: Reestruturação para 6 suítes especializadas totalizando **30 testes nativos** (`dom`, `responsive`, `security`, `modules`, `pwa`, `serve`).
+
+### Fixed
+- **Bloqueio Total contra XSS (Zero Sinks Inseguros)**: Eliminados todos os usos de atribuições diretas de marcação HTML em `achievements.js`, `quiz.js` e `i18n.js`, substituídos por criação declarativa via `h()` (`createElement`/`textContent`) e parser manual de fragmentos inline (`buildSafeRichFragment`).
+- **Bug no Contador do Soundboard**: Corrigida variável não declarada `soundsPlayedCount` que impedia a contagem correta para a conquista `sound_master`.
+- **Conflito de Atalhos Globais**: Resolvida colisão na tecla `T` (alternância de tema vs. fala do soundboard), movendo falas sintetizadas para `Q`, `W` e `E`.
+- **Busca e Ordenação da Central de Clipes**: Corrigidos seletores ausentes (`.clip-title`, `.clip-desc`, `.clip-game-pill` → `h3`, `p`, `.clip-game`), parsing numérico preciso de visualizações (`1.4M` > `890K`), conversão real de duração (`mm:ss` para segundos) e conexão do estado vazio `#clips-empty-state` + botão `#clips-reset-filter`.
+- **CSS Faltante & Botão Voltar ao Topo**: Adicionadas regras completas para `.clips-toolbar`, `.clips-search-box`, `.button-outline`, `.button-subtle`, `.clips-empty-state` e removida duplicação que ocultava `.back-to-top` e `[data-contrast="high"]`.
+- **Limpeza do CI**: Removida referência inexistente a `Javascript.html` em `.github/workflows/ci.yml` e arquivos duplicados em `tests/`.
+
 ## [3.0.0] - 2026-10-16 - Advanced Experience & PWA Release
 
 ### Added
@@ -22,26 +44,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - **Dark/Light Theme**: Suporte completo a alternância de temas claro e escuro com persistência via `localStorage` e detecção automática de preferência do sistema operacional (`prefers-color-scheme`).
 - **Galeria Interativa & Lightbox**: Visualização ampliada das variantes dimensionais e memes com navegação por teclado (ESC para fechar) e retenção de foco acessível.
-- **Carrossel Interativo (Swiper.js)**: Navegação tátil e por gestos com paginação dinâmica para relatos e depoimentos.
-- **Animações Fluidas (ScrollReveal)**: Efeitos de revelação suave e progressiva de componentes durante o scroll.
-- **Modal de Contribuição & Toast Notifications**: Formulário interativo para envio de memes com validação de campos e alertas instantâneos não bloqueantes via Toast.
-- **Acessibilidade Completa (WCAG AA)**: Implementação de skip links (`#main-content`), tags semânticas HTML5, atributos ARIA 1.2 e região acessível `a11y-live-region`.
-- **Otimização de SEO & Redes Sociais**: Meta tags OpenGraph, Twitter Cards e schema semântico para compartilhamento enriquecido no WhatsApp, Twitter e Discord.
-- **Favicon Vetorial**: Ícone responsivo em formato SVG (`favicon.svg`).
-- **Suíte de Testes Automatizados**: Testes de integridade estrutural do DOM e acessibilidade (`tests/test_dom.js`) usando o Node.js Test Runner nativo.
-- **Padrões de Governança e Qualidade**: Criação de `CONTRIBUTING.md` com Conventional Commits, `SECURITY.md`, `LICENSE` (MIT), `.editorconfig` e `.prettierrc`.
-
-### Changed
-- **Ponto de Entrada**: Modernização do layout legado (`Javascript.html`) para um novo e semântico `index.html`.
-- **Arquitetura CSS**: Substituição de regras legadas por variáveis CSS (`var(--...)`), CSS Grid fluido, Flexbox e design com efeito Glassmorphism.
-- **Arquitetura JavaScript**: Código ES6+ limpo e modular (`main.js`) com tratamento robusto de eventos.
-- **Documentação Oficial**: `README.md` reescrito com badges de status, tabela de recursos, guia Quick Start e detalhamento de arquitetura.
-
-### Fixed
-- Correção de problemas de contraste e ilegibilidade de texto no tema escuro.
-- Correção de estouro de viewport horizontal e quebras de grid em dispositivos móveis.
-- Correção de handlers inline desnecessários no HTML.
+- **Carrossel Interativo (Swiper.js)** & **ScrollReveal**.
+- **Modal de Contribuição & Toast Notifications**.
+- **Acessibilidade Completa (WCAG AA)**, **SEO & OpenGraph**, **Favicon SVG** e governança inicial.
 
 ## [1.0.0] - 2023-04-10 - Versão Inicial
-### Added
-- Página inicial original `Javascript.html` com apresentação básica do streamer Alanzoka e lista estática de memes.
+- Página inicial original com apresentação básica do streamer Alanzoka e lista estática de memes.

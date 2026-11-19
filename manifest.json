@@ -1,7 +1,8 @@
 {
+  "id": "alanverso-pwa-v5",
   "name": "Alanverso — O Multiverso Definitivo do Alanzoka",
   "short_name": "Alanverso",
-  "description": "Portal interativo com memes históricos, soundboard Web Audio API, central de clipes, gerador de memes HTML5, quiz oficial e sistema de conquistas do Alanzoka.",
+  "description": "Portal interativo com memes históricos, soundboard Web Audio API DSP, central de clipes com favoritos, gerador de memes HTML5, quiz oficial e conquistas do Alanzoka.",
   "lang": "pt-BR",
   "dir": "ltr",
   "start_url": "./index.html",
@@ -13,7 +14,7 @@
   "categories": ["entertainment", "games", "humor"],
   "icons": [
     {
-      "src": "favicon.svg",
+      "src": "assets/icons/favicon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any maskable"
@@ -21,27 +22,27 @@
   ],
   "shortcuts": [
     {
-      "name": "Soundboard Interativo",
+      "name": "Soundboard Interativo DSP",
       "short_name": "Soundboard",
-      "description": "Tocar sons e bordões do Alanzoka",
+      "description": "Tocar sons, efeitos Eco/Bass Boost e bordões do Alanzoka",
       "url": "./index.html#soundboard"
     },
     {
       "name": "Central de Clipes",
       "short_name": "Clipes",
-      "description": "Buscar e assistir clipes lendários",
+      "description": "Buscar, favoritar e assistir clipes lendários",
       "url": "./index.html#clips"
     },
     {
       "name": "Quiz do Alanverso",
       "short_name": "Quiz",
-      "description": "Testar conhecimentos sobre o Alanzoka",
+      "description": "Testar conhecimentos com Dicas 50/50 e Combo de acertos",
       "url": "./index.html#quiz"
     },
     {
       "name": "Conquistas & Perfil",
       "short_name": "Conquistas",
-      "description": "Ver troféus desbloqueados e exportar perfil",
+      "description": "Ver troféus desbloqueados, estatísticas e exportar perfil JSON",
       "url": "./index.html#achievements"
     }
   ]
